@@ -1,10 +1,6 @@
-<br>![project](img/description/photo1.png)
-
 # Design work internet technologies
 
 ## Responsive HTML/CSS/JS website Model website with advanced shopping cart and API [link](https://openweathermap.org)
-
-### Presenter: M.Sc. Eng. Marcin Mrukowicz
 
 ### Author: Dawid Olko | album no.: 125148 |Major: Computer Science, lab group 3
 
