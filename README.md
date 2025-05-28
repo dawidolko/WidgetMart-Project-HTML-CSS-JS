@@ -2,7 +2,7 @@
 
 ## Responsive HTML/CSS/JS website Model website with advanced shopping cart and API [link](https://openweathermap.org)
 
-### Author: Dawid Olko | album no.: 125148 |Major: Computer Science, lab group 3
+### Author: Dawid Olko | album no.: 125148 |Major: Computer Science
 
 ### Rzeszów 2024
 
