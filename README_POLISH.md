@@ -1,12 +1,15 @@
- <br>![projekt](img/description/photo1.png)
+<br>![projekt](img/description/photo1.png)
+
 # Praca projektowa technologie internetowe
+
 ## Responsywna strona HTML/CSS/JS Wzorcowy Serwis Internetowy z zaawansowanym koszykiem oraz z wykorzystaniem API [link](https://openweathermap.org)
 
-### Prowadzący:	mgr inż. Marcin Mrukowicz	
+### Prowadzący: mgr inż. Marcin Mrukowicz
+
 ### Autor: Dawid Olko | nr albumu: 125148 |Kierunek: Informatyka, grupa lab 3
-### Rzeszów 2024
 
 ## Spis treści
+
 1. [Strona tytułowa](#1-strona-tytułowa)
 2. [Zdefiniowanie problemu do realizacji](#2-zdefiniowanie-problemu-do-realizacji)
 3. [Propozycja rozwiązania problemu](#3-propozycja-rozwiązania-problemu)
@@ -26,6 +29,7 @@
 Projekt obejmuje zestaw stron internetowych składających się z różnorodnych sekcji, takich jak strona główna, galeria, produkty, usługi, kontakt, FAQ, i polityka prywatności, z których każda została zdefiniowana przy użyciu HTML i stylizowana za pomocą dedykowanych plików CSS. Strony są zaprojektowane z myślą o dostarczeniu użytkownikowi intuicyjnego i angażującego doświadczenia, umożliwiającego łatwe nawigowanie i dostęp do potrzebnych informacji.
 
 **Szczegóły dotyczące plików:**
+
 - `ourProducts.html`, `pay.html`, `productFirst.html`, `productSecond.html`, `productThird.html`: Strony te opisują oferowane produkty, umożliwiają zapoznanie się z ofertą oraz dokonywanie zakupów. Ich stylizacja została zdefiniowana w plikach CSS odpowiadających nazwami produktom.
 - `services.html`, `privacy.html`, `aboutUs.html`, `contact.html`, `faq.html`, `gallery.html`, `home.html`: Każda z tych stron pełni specyficzne zadanie, od przedstawienia usług, przez informowanie o polityce prywatności, aż po zapewnienie kontaktu z właścicielami serwisu. Strony te są zaprojektowane w taki sposób, aby użytkownik mógł łatwo znaleźć potrzebne informacje.
 - **Pliki CSS:** Dla każdej strony HTML przygotowano odpowiedni plik CSS, który odpowiada za wizualną prezentację treści. Każdy z tych plików zawiera selektory i reguły stylów specyficzne dla elementów strony, które regulują aspekty takie jak layout, kolory, czcionki, oraz responsywność.
@@ -63,7 +67,7 @@ Dokumentacja została stworzona w celu zapewnienia szczegółowego przeglądu ka
 Projekt jest rozbudowaną witryną internetową z bogatym zestawem funkcji, możliwością interakcji z użytkownikiem oraz dynamicznym wyświetlaniem treści. Strona ta może służyć jako sklep internetowy, platforma informacyjna lub reprezentacyjna dla firmy lub organizacji. Elementy takie jak formularz kontaktowy, sekcja FAQ, galeria i szczegółowe opisy produktów i usług wskazują na profesjonalne podejście do prezentacji i obsługi klienta. Dodatkowo, integracja z zewnętrznymi API i zaawansowane skrypty JS sugerują nowoczesne i interaktywne doświadczenie użytkownika.
 
 **Logo Projektu:**
- <br>![projekt](img/description/photo2.png)
+<br>![projekt](img/description/photo2.png)
 
 <hr>
 
@@ -74,6 +78,7 @@ Projekt zakłada stworzenie szablonu strony internetowej, który będzie służy
 ### Problem do realizacji:
 
 Problemem jest stworzenie szablonu strony internetowej, który:
+
 1. **Uniwersalność i Adaptacyjność:**
    - Jest dostosowany do różnorodnych zastosowań, od prostych prezentacji po kompleksowe witryny e-commerce.
    - Umożliwia łatwe modyfikacje, w tym personalizację układów, kolorów i dodawanie nowych funkcji dzięki modularnej architekturze CSS i HTML.
@@ -133,10 +138,12 @@ Opierając się na analizie dostarczonych kodów HTML/CSS, takich jak `home.html
 **Cel:** Ułatwienie zarządzania i rozwijania szablonu.
 
 **Rozwiązanie:**
+
 - Zastosowanie semantycznego HTML w plikach takich jak `home.html` (możliwe że `index.html`), `faq.html`, `product.html`, itd., gdzie treści są strukturyzowane za pomocą nagłówków, sekcji i artykułów.
 - Modularne CSS, gdzie każdy plik (np. `styleHome.css`, `styleFaq.css`) zawiera specyficzne dla danej strony style, co ułatwia modyfikacje i personalizację.
 
 **Implementacja:**
+
 - Kod będzie zorganizowany wokół jasno zdefiniowanych komponentów i sekcji, z przemyślanym nazewnictwem klas i identyfikatorów.
 - Wykorzystanie komentarzy i czytelnego formatowania dla lepszej orientacji w kodzie.
 
@@ -145,6 +152,7 @@ Opierając się na analizie dostarczonych kodów HTML/CSS, takich jak `home.html
 **Cel:** Zapewnienie atrakcyjnego i funkcjonalnego wyświetlania na wszystkich urządzeniach.
 
 **Rozwiązanie:**
+
 - Stosowanie responsywnych technik takich jak media queries, flexbox i grid w plikach CSS (np. `styleHome.css`, `styleFaq.css`), aby szablon dostosowywał się do różnych rozmiarów ekranów i typów urządzeń.
 - Implementacja:
 - Każdy element strony będzie zaprojektowany z myślą o elastyczności i adaptacji do różnych rozdzielczości ekranu.
@@ -155,6 +163,7 @@ Opierając się na analizie dostarczonych kodów HTML/CSS, takich jak `home.html
 **Cel:** Poprawa doświadczenia użytkownika przez interaktywne i intuicyjne elementy.
 
 **Rozwiązanie:**
+
 - Dodanie elementów interaktywnych za pomocą JavaScript, jak np. w `cart.js` dla zarządzania koszykiem, rozwijane menu, karuzele zdjęć czy akordeony w sekcjach FAQ lub produktów.
 - Implementacja:
 - Skrypty JS, takie jak `modal.js`, `clock.js` czy `api.js`, będą zapewniały dodatkową interaktywność tam, gdzie to potrzebne, zachowując przy tym prostotę i wydajność.
@@ -175,33 +184,33 @@ Projekt zakłada stworzenie uniwersalnego, responsywnego i interaktywnego szablo
 - Na górze strony pokazuje się pasek nawigacyjny, który podczas przewijania strony w dół jest cały czas widoczny, niezależnie od responsywności.
 - Jest on podzielony na dwie części, pierwsza część to „logo strony”, a druga to linki główne całej strony. Po kliknięciu w ikony nawigacyjne, jak i również logo zostajemy przekierowani na adresy podstron.
 
- <br>![projekt](img/description/photo3.png)
+<br>![projekt](img/description/photo3.png)
 
 ### Tło strony głównej (pierwszy widok):
 
 - Po załadowaniu strony widoczne jest tło, które jest zablurowane, a na nim logo z efektem, który ukazuje się po najechaniu na logo. Pod nim znajduje się słowo „klucz” strony i link do podstrony, w której są przedstawione nasze „oferty”.
 
- <br>![projekt](img/description/photo4.png)
+<br>![projekt](img/description/photo4.png)
 
 ### Sekcja pierwsza (galeria):
 
 - Jako pierwsza sekcja na stronie głównej znajduje się galeria z widocznymi trzema zdjęciami, a pod nimi jest przycisk, który po kliknięciu rozwija kolejne kilka zdjęć. Każde zdjęcie ma swoją animację, która jest pokazywana po najechaniu na nie myszką.
 
- <br>![projekt](img/description/photo5.png)
+<br>![projekt](img/description/photo5.png)
 
- <br>![projekt](img/description/photo6.png)
+<br>![projekt](img/description/photo6.png)
 
 ### Sekcja druga (widok detali i krótki opis):
 
 - Kolejna sekcja to opis z alertem/popup'em, który ujawnia się po kliknięciu. Są tam również box'y, w których znajdują się informacje i przyciski do przeniesienia na podstronę produktów.
 
- <br>![projekt](img/description/photo7.png)
+<br>![projekt](img/description/photo7.png)
 
 ### Sekcja trzecia (slider):
 
 - Sekcja slideru, została oparta na przedstawieniu produktów w ułożeniu poziomym. Po kliknięciu w daną opcję na sliderze, przenosi nas do danego produktu, gdzie mamy przedstawione zdjęcie, jak i również cenę.
 
- <br>![projekt](img/description/photo8.png)
+<br>![projekt](img/description/photo8.png)
 
 ### Sekcja czwarta (oferta produktów):
 
@@ -209,26 +218,26 @@ Projekt zakłada stworzenie uniwersalnego, responsywnego i interaktywnego szablo
 
 - Przedstawione są również tam dwa przyciski, na pierwszym i ostatnim zdjęciu. Służą one do przenoszenia do podstrony produktów, gdzie dalej możemy obserwować produkty, którymi jesteśmy zainteresowani.
 
- <br>![projekt](img/description/photo9.png)
+<br>![projekt](img/description/photo9.png)
 
 ### Sekcja piąta (oferty podzielone na kategorie):
 
 - Przedstawiona sekcja, jest wykonana w łatwy i kompleksowy sposób. Ukazane są trzy produkty z nazwą, zdjęciem i przyciskiem do pokazania więcej produktów na podstronie.
 
- <br>![projekt](img/description/photo10.png)
+<br>![projekt](img/description/photo10.png)
 
 ### Sekcja szósta (kolekcje):
 
 - Ta część, to sekcja kolekcji. Ukazuje ona ofertę specjalną z opisem o % promocji oraz przyciskiem przenoszenia na podstronę ukazującą promocję.
 - Poniżej jest również 3 sposoby na szybką i tanią realizację zakupów, z możliwością zwrotu.
 
- <br>![projekt](img/description/photo11.png)
+<br>![projekt](img/description/photo11.png)
 
 ### Sekcja siódma (newsletter):
 
 - To sekcja ukazująca możliwość zasubskrybowania newslettera strony, który będzie wysyłał na podany maila, informację o nowościach i promocjach.
 
- <br>![projekt](img/description/photo12.png)
+<br>![projekt](img/description/photo12.png)
 
 ### Sekcja ósma (stopka):
 
@@ -236,7 +245,7 @@ Projekt zakłada stworzenie uniwersalnego, responsywnego i interaktywnego szablo
 - Jest na niej również informacja, że jest w pełni poprawna semantycznie, ponieważ przeszła walidację.
 - Na stopce są social media strony takie jak Facebook, Instagram, YouTube, Twitter.
 
- <br>![projekt](img/description/photo13.png)
+<br>![projekt](img/description/photo13.png)
 
 ## 4.2. Podstrona „About Us”
 
@@ -244,48 +253,48 @@ Projekt zakłada stworzenie uniwersalnego, responsywnego i interaktywnego szablo
 
 - Krótki opis opisujący naszą firmę i zapraszający do przejrzenia produktów.
 
- <br>![projekt](img/description/photo14.png)
- 
+<br>![projekt](img/description/photo14.png)
+
 ### Galeria strony:
 
 - Mała i przejrzysta galeria, po której jeśli najedziemy na zdjęcie to ma ono swoją animację.
 
- <br>![projekt](img/description/photo15.png)
- 
+<br>![projekt](img/description/photo15.png)
+
 ## 4.3. Podstrona „Products”
 
 ### Duża sekcja produktów z podziałem na produkty (KIDS/MEN/WOMEN):
 
 - Przyciski pozwalają na przełączenie między danymi strefami produktów. Możliwe jest wyświetlenie produktów tylko dla jednego grona osób, jak i dla wszystkich.
 
- <br>![projekt](img/description/photo16.png)
- 
+<br>![projekt](img/description/photo16.png)
+
 ## 4.4. Podstrona „Gallery”
- 
+
 ### Galeria (zdjęcia):
 
 - Sekcja zdjęć ułożonych według rozdzielności, sekcja ta jest zrobiona na grid’zie, więc automatycznie niezależnie od urządzenia zdjęcia się układają.
 
- <br>![projekt](img/description/photo17.png)
- 
+<br>![projekt](img/description/photo17.png)
+
 ## 4.5. Podstrona „Contact”
 
 ### Sekcja formularza kontaktowego:
 
-- Ta podstrona zawiera tylko jedną sekcję, mianowicie formularz kontaktowego, gdzie jest uzupełniony ten formularz o walidację. 
+- Ta podstrona zawiera tylko jedną sekcję, mianowicie formularz kontaktowego, gdzie jest uzupełniony ten formularz o walidację.
 
 - Po poprawnym wprowadzeniu danych wyświetla się nam popup/alert i wiadomość zostaje wysłana.
 
- <br>![projekt](img/description/photo18.png)
- 
+<br>![projekt](img/description/photo18.png)
+
 ## 4.6. Podstrona „Faq”
 
 ### Sekcja najczęstszych pytań (pytania i odpowiedzi):
 
 - Sekcja ta za pomocą details po kliknięciu na zapytanie wyświetla odpowiedź.
 
- <br>![projekt](img/description/photo19.png)
- 
+<br>![projekt](img/description/photo19.png)
+
 ## 4.7. Podstrona „Cart”
 
 ### Sekcja pierwsza (produkty w koszyku):
@@ -293,26 +302,25 @@ Projekt zakłada stworzenie uniwersalnego, responsywnego i interaktywnego szablo
 - Ta sekcja przedstawia produkty dodane do koszyka z nazwą ilością oraz ceną całkowitą.
 - Istnieje możliwość powrotu do podstrony produktów.
 
- <br>![projekt](img/description/photo20.png)
+<br>![projekt](img/description/photo20.png)
 
 ### Sekcja druga (formularz płatniczy):
 
 - Formularz ten zwraca komunikaty jeśli podamy złe dane. Po podaniu dobrych wyświetla się komunikat o udanych zakupach i przejrzeniu maila w sprawie dalszej wysyłki.
 
- <br>![projekt](img/description/photo21.png)
- 
+<br>![projekt](img/description/photo21.png)
+
 ## 4.8. Podstrona „Privacy Policy”:
 
 ### Sekcja opisu polityki prywatności:
 
 - Przedstawiony jest opis polityki prywatności po którego najechaniu test ma animację.
 
- <br>![projekt](img/description/photo22.png)
- 
+<br>![projekt](img/description/photo22.png)
+
 ## Testy strony w formacie „Desktop”:
 
-
- <br>![projekt](img/description/photo23.png)
+<br>![projekt](img/description/photo23.png)
 
 Strona główna wygląda w wersji desktopowej dobrze, nie ma nigdzie zagięć, wystających krawędzi. Pasek nawigacyjny wygląda przejrzyście, jest opisany i dodatkowo działa na wyobraźnię poprzez ikony.
 
@@ -380,25 +388,31 @@ Podsumowując można zauważyć, że strona w wersji mobilnej i desktopowej jest
 ## Testowanie wydajności:
 
 ### Czas Ładowania:
+
 - Wykorzystanie narzędzi takich jak Google PageSpeed Insights lub Lighthouse do analizy czasu ładowania strony i zidentyfikowania elementów, które mogą go spowalniać.
 
 ### Optymalizacja Zasobów:
+
 - Sprawdzenie, czy obrazy, skrypty i arkusze stylów są zoptymalizowane pod kątem szybkiego ładowania (np. kompresja, minifikacja).
 
 ## Testowanie kompatybilności przeglądarek:
 
 ### Przeglądarki Desktopowe:
+
 - Testowanie strony na najnowszych wersjach popularnych przeglądarek (Chrome, Firefox, Safari, Edge), aby upewnić się, że wygląd i funkcje działają jednolicie.
 
 ### Przeglądarki Mobilne:
+
 - Sprawdzenie działania strony na przeglądarkach mobilnych, szczególnie na systemach Android i iOS.
 
 ## Testowanie dostępności:
 
 ### Standardy Dostępności:
+
 - Wykorzystanie narzędzi takich jak WAVE lub AXE do sprawdzenia, czy strona jest dostępna dla użytkowników z ograniczeniami, np. dla osób korzystających z czytników ekranowych.
 
 ### Kontrast i Czytelność:
+
 - Ocena, czy kontrast tekstu na tle jest wystarczający dla osób z zaburzeniami widzenia, oraz czy fonty i ich rozmiary są czytelne.
 
 ## Podsumowanie:
@@ -440,6 +454,7 @@ Każdy z tych testów odgrywa kluczową rolę w zapewnieniu jakości i profesjon
 Kod jest komentowany w sposób, który ma na celu dostarczenie jasnych i czytelnych informacji na temat każdej sekcji kodu. Komentarze są używane, aby opisać, do czego służy każdy blok kodu oraz jakie są jego główne cele i funkcje. To pomaga programistom zrozumieć strukturę i działanie kodu oraz ułatwia utrzymanie i ewentualne modyfikacje w przyszłości.
 
 Komentarze są także używane do spełnienia wymogu tego punktu:
+
 - Komentarze są używane do opisania zmiennych korzeniowych, keyframes oraz stylów dla ciała strony, nagłówka i innych sekcji kodu.
 - Komentarze są napisane w jasny i zrozumiały sposób, co pomaga innym programistom szybko zrozumieć kod.
 - Komentarze zawierają informacje o tym, co dany fragment kodu robi, jakie są jego efekty wizualne oraz jakie są używane techniki (np. flexbox) w projekcie.
@@ -455,6 +470,7 @@ W części dokumentacji poświęconej kodowi źródłowemu, szczególną uwagę 
 Całość dokumentacji dostępna również pod linkiem [tutaj](https://projekt2.dawidolko.pl/kss/styleguide/).
 
 JavaScript wykorzystywany w projekcie jest dokumentowany za pomocą JSDoc, standardu dla komentarzy w kodzie JavaScript, który pozwala na generowanie atrakcyjnej i funkcjonalnej dokumentacji. Obejmuje to:
+
 - Opisy Funkcji i Metod: Jasne wyjaśnienia dotyczące tego, co robi każda funkcja lub metoda, jakie argumenty przyjmuje i co zwraca.
 - Przykłady Użycia: Wskazówki dotyczące sposobu wykorzystania poszczególnych funkcji i metod w praktyce.
 - Typowanie: Informacje o oczekiwanych typach danych, co jest szczególnie pomocne w dynamicznym środowisku JavaScript.
@@ -467,6 +483,7 @@ Dzięki tym metodom, dokumentacja staje się integralną częścią projektu, ws
 Całość dokumentacji dostępna również pod linkiem tutaj: [link](https://projekt2.dawidolko.pl/jsDoc1/out/index.html)
 
 ### Grafika AI:
+
 Wszystkie grafiki użyte w projekcie są wygenerowane za pomocą DALL-E, nowoczesnego narzędzia AI do generowania obrazów. Obrazy te są unikalne i dostosowane do potrzeb wizualnych projektu, co dodaje indywidualnego charakteru i innowacyjności do prezentacji strony.
 
 Podsumowując, dokumentacja kodu, wraz z systematycznym komentowaniem, wykorzystaniem KSS i JSDoc, oraz unikalnymi grafikami AI, tworzy solidne i przystępne fundamenty dla projektu. Wszystko działa prawidłowo i efektywnie, zapewniając wysoką jakość oraz łatwość dalszego rozwoju i adaptacji projektu.
@@ -475,7 +492,7 @@ Podsumowując, dokumentacja kodu, wraz z systematycznym komentowaniem, wykorzyst
 
 ## 6. Linki do źródeł
 
-- Co do ikon użytych w nawigacji, zostały one pozyskane z serwisu [Flaticon](https://www.flaticon.com/). 
+- Co do ikon użytych w nawigacji, zostały one pozyskane z serwisu [Flaticon](https://www.flaticon.com/).
 
 - Treści graficzne i ikony z serwisu Flaticon są dostępne na licencji Creative Commons BY 3.0, co oznacza, że można je używać w projektach, pod warunkiem zachowania informacji o autorze (atrybucja). Dlatego też, autor projektu powinien uwzględnić odpowiednie atrybucje do tych ikon, informując o ich źródle i autorze.
 

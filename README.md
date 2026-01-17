@@ -4,8 +4,6 @@
 
 ### Author: Dawid Olko | album no.: 125148 |Major: Computer Science
 
-### Rzeszów 2024
-
 ## Contents
 
 1. [Title page](#1-title-page)
@@ -78,17 +76,14 @@ The project involves the creation of a website template that will serve as a uni
 The problem is to create a website template that:
 
 1. **Versatility and Adaptability:**
-
    - It is adapted to a variety of applications, from simple presentations to comprehensive e-commerce websites.
    - Enables easy modifications, including personalizing layouts, colors and adding new features thanks to the modular CSS and HTML architecture.
 
 2. **Intuitiveness and Usability:**
-
    - It is intuitive to use for users of all experience levels.
    - It has clear and extensive documentation, making it easier to use all the template's functionalities.
 
 3. **Responsivity and Availability:**
-
    - Guarantees correct display on all types of devices thanks to its responsive design and flexible layouts.
    - Ensures accessibility for people with various needs, respecting Internet accessibility standards.
 
@@ -101,17 +96,14 @@ The problem is to create a website template that:
 To solve the above problems, the following steps are proposed:
 
 1. **Versatility and Adaptability:**
-
    - Modular architecture: Your HTML files such as `aboutUs.html`, `product.html`, `services.html`, etc. show that the page structure is divided into different modules and sections, making it easy to personalize.
    - Predefined color schemes and UI components in CSS files such as `styleAboutUs.css`, `styleCart.css`, etc., which can be easily customized.
 
 2. **Intuitiveness and Usability:**
-
    - The structure of the files and code suggests that the project is well organized, which will make it easier for future users to manage the content and structure of the site.
    - JavaScript files such as `api.js`, `cart.js`, `modal.js`, etc. add interactive elements that make it easier to manage page features.
 
 3. **Responsivity and Availability:**
-
    - CSS files are likely designed with responsiveness in mind, ensuring that the template will display correctly on various devices.
    - Applying accessibility practices such as semantic HTML markup and appropriate labeling for assistive technologies.
 
