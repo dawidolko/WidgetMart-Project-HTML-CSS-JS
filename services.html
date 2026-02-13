@@ -1,253 +1,591 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl-PL">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Responsive template - DESIGN PROJECT v2">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Responsive template - DESIGN PROJECT v2" />
     <title>responsive template - DESIGN PROJECT v2</title>
-    <link rel="icon" href="img/icon.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styleServices.css">
-</head>
+    <link rel="icon" href="img/icon.webp" type="image/webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Roboto:ital,wght@0,100;1,100&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/styleServices.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <div id="nav">
-                <label id="hamburger" for="toggle">☰</label>
-                        <!-- Przycisk menu hamburger dla responsywności -->
-                <input type="checkbox" id="toggle">  
-                <ol id="menu">
-                    <li class="menuItem"><a href="./index.html"><ruby><img src="img/home-alt.svg" alt="home" loading="lazy" width="25" height="25">
-                        <rt>HOME</rt>
-                    </ruby></a>
-                    <ul style="display:none;">
-                    </ul>
+      <nav>
+        <div id="nav">
+          <label id="hamburger" for="toggle">☰</label>
+          <!-- Przycisk menu hamburger dla responsywności -->
+          <input type="checkbox" id="toggle" />
+          <ol id="menu">
+            <li class="menuItem">
+              <a href="./index.html"
+                ><ruby
+                  ><img
+                    src="img/home-alt.svg"
+                    alt="home"
+                    loading="lazy"
+                    width="25"
+                    height="25" />
+                  <rt>HOME</rt>
+                </ruby></a
+              >
+              <ul style="display: none"></ul>
+            </li>
+            <li class="menuItem">
+              <a href="./aboutUs.html"
+                ><ruby
+                  ><img
+                    src="img/collage.svg"
+                    alt="collage"
+                    loading="lazy"
+                    width="25"
+                    height="25" />
+                  <rt>ABOUT US</rt>
+                </ruby></a
+              >
+            </li>
+            <li class="menuItem">
+              <a href="./product.html"
+                ><ruby
+                  ><img
+                    src="img/calendar-next.svg"
+                    alt="calendar"
+                    loading="lazy"
+                    width="25"
+                    height="25" />
+                  <rt>PRODUCTS</rt>
+                </ruby></a
+              >
+              <ul class="podmenu">
+                <li class="podmenuItem">
+                  <a href="./product.html#kid1"
+                    ><ruby
+                      ><img
+                        src="img/kids.webp"
+                        alt="calendar"
+                        loading="lazy"
+                        width="25"
+                        height="25" />
+                      <rt>PRODUCTS KID</rt>
+                    </ruby></a
+                  >
+                </li>
+                <li class="podmenuItem">
+                  <a href="./product.html#men1"
+                    ><ruby
+                      ><img
+                        src="img/man.webp"
+                        alt="calendar"
+                        loading="lazy"
+                        width="25"
+                        height="25" />
+                      <rt>PRODUCT MEN</rt>
+                    </ruby></a
+                  >
+                </li>
+                <li class="podmenuItem">
+                  <a href="./product.html#women1"
+                    ><ruby
+                      ><img
+                        src="img/woman.webp"
+                        alt="calendar"
+                        loading="lazy"
+                        width="25"
+                        height="25" />
+                      <rt>PRODUCT WOMEN</rt>
+                    </ruby></a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="menuItem">
+              <a href="./contact.html"
+                ><ruby
+                  ><img
+                    src="img/phone.svg"
+                    alt="phone"
+                    loading="lazy"
+                    width="25"
+                    height="25" />
+                  <rt>CONCACT</rt>
+                </ruby></a
+              >
+            </li>
+            <li class="menuItem">
+              <a href="./gallery.html"
+                ><ruby
+                  ><img
+                    src="img/color-bucket.svg"
+                    alt="color-bucket"
+                    loading="lazy"
+                    width="25"
+                    height="25" />
+                  <rt>GALLERY</rt>
+                </ruby></a
+              >
+              <ul class="podmenu">
+                <li class="podmenuItem">
+                  <a href="./gallery.html#kid"
+                    ><ruby
+                      ><img
+                        src="img/kids.webp"
+                        alt="calendar"
+                        loading="lazy"
+                        width="25"
+                        height="25" />
+                      <rt>GALLERY KID</rt>
+                    </ruby></a
+                  >
+                  <ul class="podpodmenu">
+                    <li class="podpodmenuItem">
+                      <a href="./gallery.html#spring1"
+                        ><ruby
+                          ><img
+                            src="img/sakura.webp"
+                            alt="calendar"
+                            loading="lazy"
+                            width="25"
+                            height="25" />
+                          <rt>SPRING</rt>
+                        </ruby></a
+                      >
                     </li>
-                    <li class="menuItem"><a href="./aboutUs.html"><ruby><img src="img/collage.svg" alt="collage" loading="lazy" width="25" height="25">
-                        <rt>ABOUT US</rt>
-                    </ruby></a></li>
-                    <li class="menuItem"><a href="./product.html"><ruby><img src="img/calendar-next.svg" alt="calendar" loading="lazy" width="25" height="25">
-                        <rt>PRODUCTS</rt>
-                    </ruby></a>
-                        <ul class="podmenu">
-                            <li class="podmenuItem"><a href="./product.html#kid1"><ruby><img src="img/kids.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                <rt>PRODUCTS KID</rt>
-                            </ruby></a></li>
-                            <li class="podmenuItem"><a href="./product.html#men1"><ruby><img src="img/man.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                <rt>PRODUCT MEN</rt>
-                            </ruby></a></li>
-                            <li class="podmenuItem"><a href="./product.html#women1"><ruby><img src="img/woman.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                <rt>PRODUCT WOMEN</rt>
-                            </ruby></a></li>
-                        </ul>
+                    <li class="podpodmenuItem">
+                      <a href="./gallery.html#summer1"
+                        ><ruby
+                          ><img
+                            src="img/sun.webp"
+                            alt="calendar"
+                            loading="lazy"
+                            width="25"
+                            height="25" />
+                          <rt>SUMMER</rt>
+                        </ruby></a
+                      >
                     </li>
-                    <li class="menuItem"><a href="./contact.html"><ruby><img src="img/phone.svg" alt="phone" loading="lazy" width="25" height="25">
-                        <rt>CONCACT</rt>
-                    </ruby></a></li>
-                    <li class="menuItem"><a href="./gallery.html"><ruby><img src="img/color-bucket.svg" alt="color-bucket" loading="lazy" width="25" height="25">
-                        <rt>GALLERY</rt>
-                    </ruby></a>
-                        <ul class="podmenu">
-                            <li class="podmenuItem"><a href="./gallery.html#kid"><ruby><img src="img/kids.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                <rt>GALLERY KID</rt>
-                            </ruby></a>
-                                <ul class="podpodmenu">
-                                    <li class="podpodmenuItem"><a href="./gallery.html#spring1"><ruby><img src="img/sakura.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                        <rt>SPRING</rt>
-                                    </ruby></a></li>
-                                    <li class="podpodmenuItem"><a href="./gallery.html#summer1"><ruby><img src="img/sun.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                        <rt>SUMMER</rt>
-                                    </ruby></a></li>
-                                    <li class="podpodmenuItem"><a href="./gallery.html#autumn1"><ruby><img src="img/leaves.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                        <rt>AUTUMN</rt>
-                                    </ruby></a></li>
-                                    <li class="podpodmenuItem"><a href="./gallery.html#winter1"><ruby><img src="img/snowflake.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                        <rt>WINTER</rt>
-                                    </ruby></a></li>
-                                </ul>
-                            </li>
-                            <li class="podmenuItem"><a href="./gallery.html#men"><ruby><img src="img/man.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                <rt>GALLERY MEN</rt>
-                            </ruby></a>
-                                <ul class="podpodmenu">
-                                    <li class="podpodmenuItem"><a href="./gallery.html#spring2"><ruby><img src="img/sakura.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                        <rt>SPRING</rt>
-                                    </ruby></a></li>
-                                    <li class="podpodmenuItem"><a href="./gallery.html#summer2"><ruby><img src="img/sun.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                        <rt>SUMMER</rt>
-                                    </ruby></a></li>
-                                    <li class="podpodmenuItem"><a href="./gallery.html#autumn2"><ruby><img src="img/leaves.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                        <rt>AUTUMN</rt>
-                                    </ruby></a></li>
-                                    <li class="podpodmenuItem"><a href="./gallery.html#winter2"><ruby><img src="img/snowflake.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                        <rt>WINTER</rt>
-                                    </ruby></a></li>
-                                </ul>
-                            </li>
-                            <li class="podmenuItem"><a href="./gallery.html#women"><ruby><img src="img/woman.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                <rt>GALLERY WOMEN</rt>
-                            </ruby></a>
-                                <ul class="podpodmenu">
-                                    <li class="podpodmenuItem"><a href="./gallery.html#spring3"><ruby><img src="img/sakura.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                        <rt>SPRING</rt>
-                                    </ruby></a></li>
-                                    <li class="podpodmenuItem"><a href="./gallery.html#summer3"><ruby><img src="img/sun.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                        <rt>SUMMER</rt>
-                                    </ruby></a></li>
-                                    <li class="podpodmenuItem"><a href="./gallery.html#autumn3"><ruby><img src="img/leaves.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                        <rt>AUTUMN</rt>
-                                    </ruby></a></li>
-                                    <li class="podpodmenuItem"><a href="./gallery.html#winter3"><ruby><img src="img/snowflake.webp" alt="calendar" loading="lazy" width="25" height="25">
-                                        <rt>WINTER</rt>
-                                    </ruby></a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <li class="podpodmenuItem">
+                      <a href="./gallery.html#autumn1"
+                        ><ruby
+                          ><img
+                            src="img/leaves.webp"
+                            alt="calendar"
+                            loading="lazy"
+                            width="25"
+                            height="25" />
+                          <rt>AUTUMN</rt>
+                        </ruby></a
+                      >
                     </li>
-                    <li class="menuItem"><a href="./faq.html"><ruby><img src="img/comment.svg" alt="comment" loading="lazy" width="25" height="25">
-                        <rt>FAQ</rt>
-                    </ruby></a></li>
-                </ol>
-                <button class="toggle">Dark mode</button>
-                <div class="cart-icon">
-                    <a href="./cart.html"><img src="img/shopping-cart.svg" alt="Cart" height="25" width="25"></a>
-                    <span id="cartCount">0</span>
-                </div>
-            </div>
-        </nav>
+                    <li class="podpodmenuItem">
+                      <a href="./gallery.html#winter1"
+                        ><ruby
+                          ><img
+                            src="img/snowflake.webp"
+                            alt="calendar"
+                            loading="lazy"
+                            width="25"
+                            height="25" />
+                          <rt>WINTER</rt>
+                        </ruby></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="podmenuItem">
+                  <a href="./gallery.html#men"
+                    ><ruby
+                      ><img
+                        src="img/man.webp"
+                        alt="calendar"
+                        loading="lazy"
+                        width="25"
+                        height="25" />
+                      <rt>GALLERY MEN</rt>
+                    </ruby></a
+                  >
+                  <ul class="podpodmenu">
+                    <li class="podpodmenuItem">
+                      <a href="./gallery.html#spring2"
+                        ><ruby
+                          ><img
+                            src="img/sakura.webp"
+                            alt="calendar"
+                            loading="lazy"
+                            width="25"
+                            height="25" />
+                          <rt>SPRING</rt>
+                        </ruby></a
+                      >
+                    </li>
+                    <li class="podpodmenuItem">
+                      <a href="./gallery.html#summer2"
+                        ><ruby
+                          ><img
+                            src="img/sun.webp"
+                            alt="calendar"
+                            loading="lazy"
+                            width="25"
+                            height="25" />
+                          <rt>SUMMER</rt>
+                        </ruby></a
+                      >
+                    </li>
+                    <li class="podpodmenuItem">
+                      <a href="./gallery.html#autumn2"
+                        ><ruby
+                          ><img
+                            src="img/leaves.webp"
+                            alt="calendar"
+                            loading="lazy"
+                            width="25"
+                            height="25" />
+                          <rt>AUTUMN</rt>
+                        </ruby></a
+                      >
+                    </li>
+                    <li class="podpodmenuItem">
+                      <a href="./gallery.html#winter2"
+                        ><ruby
+                          ><img
+                            src="img/snowflake.webp"
+                            alt="calendar"
+                            loading="lazy"
+                            width="25"
+                            height="25" />
+                          <rt>WINTER</rt>
+                        </ruby></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="podmenuItem">
+                  <a href="./gallery.html#women"
+                    ><ruby
+                      ><img
+                        src="img/woman.webp"
+                        alt="calendar"
+                        loading="lazy"
+                        width="25"
+                        height="25" />
+                      <rt>GALLERY WOMEN</rt>
+                    </ruby></a
+                  >
+                  <ul class="podpodmenu">
+                    <li class="podpodmenuItem">
+                      <a href="./gallery.html#spring3"
+                        ><ruby
+                          ><img
+                            src="img/sakura.webp"
+                            alt="calendar"
+                            loading="lazy"
+                            width="25"
+                            height="25" />
+                          <rt>SPRING</rt>
+                        </ruby></a
+                      >
+                    </li>
+                    <li class="podpodmenuItem">
+                      <a href="./gallery.html#summer3"
+                        ><ruby
+                          ><img
+                            src="img/sun.webp"
+                            alt="calendar"
+                            loading="lazy"
+                            width="25"
+                            height="25" />
+                          <rt>SUMMER</rt>
+                        </ruby></a
+                      >
+                    </li>
+                    <li class="podpodmenuItem">
+                      <a href="./gallery.html#autumn3"
+                        ><ruby
+                          ><img
+                            src="img/leaves.webp"
+                            alt="calendar"
+                            loading="lazy"
+                            width="25"
+                            height="25" />
+                          <rt>AUTUMN</rt>
+                        </ruby></a
+                      >
+                    </li>
+                    <li class="podpodmenuItem">
+                      <a href="./gallery.html#winter3"
+                        ><ruby
+                          ><img
+                            src="img/snowflake.webp"
+                            alt="calendar"
+                            loading="lazy"
+                            width="25"
+                            height="25" />
+                          <rt>WINTER</rt>
+                        </ruby></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menuItem">
+              <a href="./faq.html"
+                ><ruby
+                  ><img
+                    src="img/comment.svg"
+                    alt="comment"
+                    loading="lazy"
+                    width="25"
+                    height="25" />
+                  <rt>FAQ</rt>
+                </ruby></a
+              >
+            </li>
+          </ol>
+          <button class="toggle">Dark mode</button>
+          <div class="cart-icon">
+            <a href="./cart.html"
+              ><img
+                src="img/shopping-cart.svg"
+                alt="Cart"
+                height="25"
+                width="25"
+            /></a>
+            <span id="cartCount">0</span>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <div id="container" class="container">
-            <button style="display: none;" id="button" class="button">Potwierdź godzinę !</button>
+      <div id="container" class="container">
+        <button style="display: none" id="button" class="button">
+          Potwierdź godzinę !
+        </button>
+      </div>
+
+      <div class="chat-container">
+        <div class="chat-header">
+          <span>DRAW A QUOTE!</span>
+          <button class="przycisk" id="toggle-theme">change theme</button>
+          <button class="przycisk" id="expand-collapse-btn">-</button>
         </div>
-
-        <div class="chat-container">
-            <div class="chat-header">
-                <span>DRAW A QUOTE!</span>
-                <button class="przycisk" id="toggle-theme">change theme</button>
-                <button class="przycisk" id="expand-collapse-btn">-</button>
-            </div>
-            <div class="chat-content">
-                <p>See what someone has to say to you today. Think about it...</p>
-                <button class="przycisk" id="get-quote">Download quote</button>
-                <div class="przycisk" id="quote-display"></div>
-            </div>
+        <div class="chat-content">
+          <p>See what someone has to say to you today. Think about it...</p>
+          <button class="przycisk" id="get-quote">Download quote</button>
+          <div class="przycisk" id="quote-display"></div>
         </div>
+      </div>
 
-        <section class="section offer" id="services">
-            <h1 style="display:none;">.</h1>
-            <div class="offer__container">
-                <h2 class="section__heading offer__text">Oferta</h2>
-                <div class="offer__box">
-                    <div class="offer__item">
-                        <i class="offer__icon fas fa-dumbbell"></i>
-                        <h3 class="offer__title">Lorem ipsum</h3>
-                        <p class="offer__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Suspendisse ac felis mi. Nulla urna risus, malesuada nec blandit at, dictum a est.
-                            Integer pulvinar dui elit, vitae vehicula est tempor venenatis.</p>
-                        <a class="buttoner" href="./product.html#kid">VIEV MORE</a>
-                    </div>
-                    <div class="offer__item">
-                        <i class="offer__icon fas fa-running"></i>
-                        <h3 class="offer__title">Lorem ipsum</h3>
-                        <p class="offer__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Suspendisse ac felis mi. Nulla urna risus, malesuada nec blandit at, dictum a est.
-                            Integer pulvinar dui elit, vitae vehicula est tempor venenatis.</p>
-                        <a class="buttoner" href="./product.html#kid">VIEV MORE</a>
-                    </div>
-                </div>
-
-                <div class="about-us__box">
-                    <img src="img/product20.webp" alt="Lorem ipsum" class="about-us__img about-us__img--desktop"  width="200" height="200">
-                    <img src="img/product11.webp" alt="Lorem ipsum" class="about-us__img"  width="200" height="200">
-                    <img src="img/product12.webp" alt="Lorem ipsum" class="about-us__img"  width="200" height="200">
-                </div>
-
-                <div class="offer__box">
-                    <div class="offer__item">
-                        <i class="offer__icon fas fa-drumstick-bite"></i>
-                        <h3 class="offer__title">Lorem ipsum</h3>
-                        <p class="offer__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Suspendisse ac felis mi. Nulla urna risus, malesuada nec blandit at, dictum a est.
-                            Integer pulvinar dui elit, vitae vehicula est tempor venenatis.</p>
-                       <a class="buttoner" href="./product.html#men">VIEV MORE</a>
-                    </div>
-                    <div class="offer__item">
-                        <i class="offer__icon fas fa-medkit"></i>
-                        <h3 class="offer__title">Lorem ipsum</h3>
-                        <p class="offer__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Suspendisse ac felis mi. Nulla urna risus, malesuada nec blandit at, dictum a est.
-                            Integer pulvinar dui elit, vitae vehicula est tempor venenatis.</p>
-                        <a class="buttoner" href="./product.html#men">VIEV MORE</a>
-                    </div>
-                </div>
-                <div class="about-us__box">
-                    <img src="img/product4.webp" alt="Lorem ipsum" class="about-us__img about-us__img--desktop"  width="200" height="200">
-                    <img src="img/product14.webp" alt="Lorem ipsum" class="about-us__img"  width="200" height="200">
-                    <img src="img/product16.webp" alt="Lorem ipsum" class="about-us__img"  width="200" height="200">
-                </div>
-                <div class="offer__box">
-                    <div class="offer__item">
-                        <i class="offer__icon fas fa-swimmer"></i>
-                        <h3 class="offer__title">Lorem ipsum</h3>
-                        <p class="offer__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Suspendisse ac felis mi. Nulla urna risus, malesuada nec blandit at, dictum a est.
-                            Integer pulvinar dui elit, vitae vehicula est tempor venenatis.</p>
-                        <a class="buttoner" href="./product.html#women">VIEV MORE</a>
-                    </div>
-                    <div class="offer__item">
-                        <i class="offer__icon fas fa-child"></i>
-                        <h3 class="offer__title">Lorem ipsum</h3>
-                        <p class="offer__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Suspendisse ac felis mi. Nulla urna risus, malesuada nec blandit at, dictum a est.
-                            Integer pulvinar dui elit, vitae vehicula est tempor venenatis.</p>
-                        <a class="buttoner" href="./product.html#women">VIEV MORE</a>
-                    </div>
-                </div>
-                <div class="about-us__box">
-                    <img src="img/product1.webp" alt="Lorem ipsum" class="about-us__img about-us__img--desktop"  width="200" height="200">
-                    <img src="img/product6.webp" alt="Lorem ipsum" class="about-us__img"  width="200" height="200">
-                    <img src="img/mainPage9.webp" alt="Lorem ipsum" class="about-us__img" width="200" height="200">
-                </div>
+      <section class="section offer" id="services">
+        <h1 style="display: none">.</h1>
+        <div class="offer__container">
+          <h2 class="section__heading offer__text">Oferta</h2>
+          <div class="offer__box">
+            <div class="offer__item">
+              <i class="offer__icon fas fa-dumbbell"></i>
+              <h3 class="offer__title">Lorem ipsum</h3>
+              <p class="offer__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse ac felis mi. Nulla urna risus, malesuada nec blandit
+                at, dictum a est. Integer pulvinar dui elit, vitae vehicula est
+                tempor venenatis.
+              </p>
+              <a class="buttoner" href="./product.html#kid">VIEV MORE</a>
             </div>
-        </section>
+            <div class="offer__item">
+              <i class="offer__icon fas fa-running"></i>
+              <h3 class="offer__title">Lorem ipsum</h3>
+              <p class="offer__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse ac felis mi. Nulla urna risus, malesuada nec blandit
+                at, dictum a est. Integer pulvinar dui elit, vitae vehicula est
+                tempor venenatis.
+              </p>
+              <a class="buttoner" href="./product.html#kid">VIEV MORE</a>
+            </div>
+          </div>
+
+          <div class="about-us__box">
+            <img
+              src="img/product20.webp"
+              alt="Lorem ipsum"
+              class="about-us__img about-us__img--desktop"
+              width="200"
+              height="200" />
+            <img
+              src="img/product11.webp"
+              alt="Lorem ipsum"
+              class="about-us__img"
+              width="200"
+              height="200" />
+            <img
+              src="img/product12.webp"
+              alt="Lorem ipsum"
+              class="about-us__img"
+              width="200"
+              height="200" />
+          </div>
+
+          <div class="offer__box">
+            <div class="offer__item">
+              <i class="offer__icon fas fa-drumstick-bite"></i>
+              <h3 class="offer__title">Lorem ipsum</h3>
+              <p class="offer__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse ac felis mi. Nulla urna risus, malesuada nec blandit
+                at, dictum a est. Integer pulvinar dui elit, vitae vehicula est
+                tempor venenatis.
+              </p>
+              <a class="buttoner" href="./product.html#men">VIEV MORE</a>
+            </div>
+            <div class="offer__item">
+              <i class="offer__icon fas fa-medkit"></i>
+              <h3 class="offer__title">Lorem ipsum</h3>
+              <p class="offer__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse ac felis mi. Nulla urna risus, malesuada nec blandit
+                at, dictum a est. Integer pulvinar dui elit, vitae vehicula est
+                tempor venenatis.
+              </p>
+              <a class="buttoner" href="./product.html#men">VIEV MORE</a>
+            </div>
+          </div>
+          <div class="about-us__box">
+            <img
+              src="img/product4.webp"
+              alt="Lorem ipsum"
+              class="about-us__img about-us__img--desktop"
+              width="200"
+              height="200" />
+            <img
+              src="img/product14.webp"
+              alt="Lorem ipsum"
+              class="about-us__img"
+              width="200"
+              height="200" />
+            <img
+              src="img/product16.webp"
+              alt="Lorem ipsum"
+              class="about-us__img"
+              width="200"
+              height="200" />
+          </div>
+          <div class="offer__box">
+            <div class="offer__item">
+              <i class="offer__icon fas fa-swimmer"></i>
+              <h3 class="offer__title">Lorem ipsum</h3>
+              <p class="offer__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse ac felis mi. Nulla urna risus, malesuada nec blandit
+                at, dictum a est. Integer pulvinar dui elit, vitae vehicula est
+                tempor venenatis.
+              </p>
+              <a class="buttoner" href="./product.html#women">VIEV MORE</a>
+            </div>
+            <div class="offer__item">
+              <i class="offer__icon fas fa-child"></i>
+              <h3 class="offer__title">Lorem ipsum</h3>
+              <p class="offer__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse ac felis mi. Nulla urna risus, malesuada nec blandit
+                at, dictum a est. Integer pulvinar dui elit, vitae vehicula est
+                tempor venenatis.
+              </p>
+              <a class="buttoner" href="./product.html#women">VIEV MORE</a>
+            </div>
+          </div>
+          <div class="about-us__box">
+            <img
+              src="img/product1.webp"
+              alt="Lorem ipsum"
+              class="about-us__img about-us__img--desktop"
+              width="200"
+              height="200" />
+            <img
+              src="img/product6.webp"
+              alt="Lorem ipsum"
+              class="about-us__img"
+              width="200"
+              height="200" />
+            <img
+              src="img/mainPage9.webp"
+              alt="Lorem ipsum"
+              class="about-us__img"
+              width="200"
+              height="200" />
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <div id="socialmedia">
-           <!-- Linki do mediów społecznościowych -->
-            <a href="https://www.facebook.com/" class="social__link"><img src="img/facebook.svg" alt="Facebook" loading="lazy" width="30" height="30"></a>
-            <a href="https://www.instagram.com/" class="social__link"><img src="img/instagram.svg" alt="Instagram" loading="lazy" width="30" height="30"></a>
-            <a href="https://www.youtube.com/" class="social__link"><img src="img/youtube.svg" alt="Youtube" loading="lazy" width="30" height="30"></a>
-            <a href="https://www.twitter.com/" class="social__link"><img src="img/twitter.svg" alt="Twitter" loading="lazy" width="30" height="30"></a>
-        </div>
-        <div class="footer">
-            <!-- Stopka strony -->
-            <p>The rights to the navbar icons belong to <a href="https://www.flaticon.com/" class="footer__link">FLATION</a></p>
-            <p class="footer__text">
-               <!-- Tekst i linki w stopce -->
-                All rights reserved &copy; 2023 Lorem ipsum |
-                <a href="./privacy.html" class="footer__link">Privacy Policy</a>
-            </p>
-        </div>
-        <div>
-           <!-- Dodatkowe informacje lub linki -->
-            <p>
-                <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                    <img style="border:0;width:88px;height:31px"
-                        src="https://jigsaw.w3.org/css-validator/images/vcss"
-                        alt="Poprawny CSS!">
-                </a>
-            </p>
-        </div>
+      <div id="socialmedia">
+        <!-- Linki do mediów społecznościowych -->
+        <a href="https://www.facebook.com/" class="social__link"
+          ><img
+            src="img/facebook.svg"
+            alt="Facebook"
+            loading="lazy"
+            width="30"
+            height="30"
+        /></a>
+        <a href="https://www.instagram.com/" class="social__link"
+          ><img
+            src="img/instagram.svg"
+            alt="Instagram"
+            loading="lazy"
+            width="30"
+            height="30"
+        /></a>
+        <a href="https://www.youtube.com/" class="social__link"
+          ><img
+            src="img/youtube.svg"
+            alt="Youtube"
+            loading="lazy"
+            width="30"
+            height="30"
+        /></a>
+        <a href="https://www.twitter.com/" class="social__link"
+          ><img
+            src="img/twitter.svg"
+            alt="Twitter"
+            loading="lazy"
+            width="30"
+            height="30"
+        /></a>
+      </div>
+      <div class="footer">
+        <!-- Stopka strony -->
+        <p>
+          The rights to the navbar icons belong to
+          <a href="https://www.flaticon.com/" class="footer__link">FLATION</a>
+        </p>
+        <p class="footer__text">
+          <!-- Tekst i linki w stopce -->
+          All rights reserved &copy; 2023 Lorem ipsum |
+          <a href="./privacy.html" class="footer__link">Privacy Policy</a>
+        </p>
+      </div>
+      <div>
+        <!-- Dodatkowe informacje lub linki -->
+        <p>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img
+              style="border: 0; width: 88px; height: 31px"
+              src="https://jigsaw.w3.org/css-validator/images/vcss"
+              alt="Poprawny CSS!" />
+          </a>
+        </p>
+      </div>
     </footer>
     <script type="module" src="js/app.js"></script>
-    <script src="js/darkbrightness.js"></script>
-    <script src="js/cart.js"></script>
-</body>
-
+    <script src="js/darkbrightness.js" defer></script>
+    <script src="js/cart.js" defer></script>
+  </body>
 </html>

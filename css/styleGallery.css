@@ -313,7 +313,7 @@ input#toggle {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("../img/bg-photo.png");
+  background-image: url("../img/bg-photo.webp");
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -1250,7 +1250,9 @@ div h2 {
 
 @media (min-width: 768px) {
   .cookie__btn {
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
   .cookie__btn:hover {
     background-color: #ffffff;

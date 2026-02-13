@@ -63,7 +63,7 @@ The documentation was created to provide a detailed overview of each aspect of t
 The project is an extensive website with a rich set of functions, the ability to interact with the user and dynamic display of content. This website can serve as an online store, information or representative platform for a company or organization. Elements such as a contact form, FAQ section, gallery and detailed descriptions of products and services indicate a professional approach to presentation and customer service. Additionally, integration with external APIs and advanced JS scripts suggest a modern and interactive user experience.
 
 **Project Logo:**
-<br>![project](img/description/photo2.png)
+<br>![project](img/description/photo2.webp)
 
 <hr>
 
@@ -180,33 +180,33 @@ The project involves the creation of a universal, responsive and interactive web
 - A navigation bar appears at the top of the page and remains visible when scrolling down the page, regardless of responsiveness.
 - It is divided into two parts, the first part is the "site logo" and the second is the main links of the entire site. After clicking on the navigation icons and logos, we are redirected to the subpage addresses.
 
-<br>![project](img/description/photo3.png)
+<br>![project](img/description/photo3.webp)
 
 ### Home page background (first view):
 
 - After loading the page, the background is blurred and has a logo with an effect that appears when you hover over the logo. Below it there is the word "key" of the page and a link to the subpage where our "offers" are presented.
 
-<br>![project](img/description/photo4.png)
+<br>![project](img/description/photo4.webp)
 
 ### Section one (gallery):
 
 - The first section on the home page is a gallery with three photos visible, and under them there is a button which, when clicked, expands several more photos. Each photo has its own animation, which is shown when you hover over it with the mouse.
 
-<br>![project](img/description/photo5.png)
+<br>![project](img/description/photo5.webp)
 
-<br>![project](img/description/photo6.png)
+<br>![project](img/description/photo6.webp)
 
 ### Section two (detail view and short description):
 
 - The next section is a description with an alert/popup that appears when clicked. There are also boxes containing information and buttons to be transferred to the product subpage.
 
-<br>![project](img/description/photo7.png)
+<br>![project](img/description/photo7.webp)
 
 ### Third section (slider):
 
 - The slider section is based on presenting products in a horizontal arrangement. After clicking on a given option on the slider, it takes us to a given product, where we have a photo and price.
 
-<br>![project](img/description/photo8.png)
+<br>![project](img/description/photo8.webp)
 
 ### Section four (product offering):
 
@@ -214,26 +214,26 @@ The project involves the creation of a universal, responsive and interactive web
 
 - Two buttons are also shown there, in the first and last photo. They are used to transfer us to the products subpage, where we can further observe the products we are interested in.
 
-<br>![project](img/description/photo9.png)
+<br>![project](img/description/photo9.webp)
 
 ### Section five (offers divided into categories):
 
 - The presented section is made in an easy and comprehensive way. Three products are shown with a name, photo and a button to show more products on the subpage.
 
-<br>![project](img/description/photo10.png)
+<br>![project](img/description/photo10.webp)
 
 ### Section six (collections):
 
 - This part is the collection section. It shows a special offer with a description of the promotion percentage and a button to move to the subpage showing the promotion.
 - Below are also 3 ways to make purchases quickly and cheaply, with the possibility of return.
 
-<br>![project](img/description/photo11.png)
+<br>![project](img/description/photo11.webp)
 
 ### Section seven (newsletter):
 
 - This is a section showing the possibility of subscribing to the website's newsletter, which will send information about new products and promotions to the provided e-mail address.
 
-<br>![project](img/description/photo12.png)
+<br>![project](img/description/photo12.webp)
 
 ### Section eight (footer):
 
@@ -241,7 +241,7 @@ The project involves the creation of a universal, responsive and interactive web
 - It also states that it is fully semantically correct because it has been validated.
 - The footer includes social media sites such as Facebook, Instagram, YouTube, and Twitter.
 
-<br>![project](img/description/photo13.png)
+<br>![project](img/description/photo13.webp)
 
 ## 4.2. "About Us" subpage
 
@@ -249,13 +249,13 @@ The project involves the creation of a universal, responsive and interactive web
 
 - A short description describing our company and inviting you to view our products.
 
-<br>![project](img/description/photo14.png)
+<br>![project](img/description/photo14.webp)
 
 ### Page gallery:
 
 - A small and clear gallery where if we hover over a photo, it has its own animation.
 
-<br>![project](img/description/photo15.png)
+<br>![project](img/description/photo15.webp)
 
 ## 4.3. "Products" subpage
 
@@ -263,7 +263,7 @@ The project involves the creation of a universal, responsive and interactive web
 
 - Buttons allow you to switch between specific product zones. It is possible to display products only for one group of people or for everyone.
 
-<br>![project](img/description/photo16.png)
+<br>![project](img/description/photo16.webp)
 
 ## 4.4. "Gallery" subpage
 
@@ -271,7 +271,7 @@ The project involves the creation of a universal, responsive and interactive web
 
 - A section of photos arranged according to resolution, this section is made on a grid, so the photos are automatically arranged regardless of the device.
 
-<br>![project](img/description/photo17.png)
+<br>![project](img/description/photo17.webp)
 
 ## 4.5. "Contact" subpage
 
@@ -281,7 +281,7 @@ The project involves the creation of a universal, responsive and interactive web
 
 - After entering the data correctly, a popup/alert is displayed and the message is sent.
 
-<br>![project](img/description/photo18.png)
+<br>![project](img/description/photo18.webp)
 
 ## 4.6. "Faq" subpage
 
@@ -289,7 +289,7 @@ The project involves the creation of a universal, responsive and interactive web
 
 - This section uses details to display the answer after clicking on the query.
 
-<br>![project](img/description/photo19.png)
+<br>![project](img/description/photo19.webp)
 
 ## 4.7. "Cart" subpage
 
@@ -298,13 +298,13 @@ The project involves the creation of a universal, responsive and interactive web
 - This section shows the products added to the cart with name, quantity and total price.
 - It is possible to return to the products subpage.
 
-<br>![project](img/description/photo20.png)
+<br>![project](img/description/photo20.webp)
 
 ### Section two (payment form):
 
 - This form returns messages if we provide wrong data. After entering the correct ones, a message about successful purchases and an e-mail regarding further shipment is displayed.
 
-<br>![project](img/description/photo21.png)
+<br>![project](img/description/photo21.webp)
 
 ## 4.8. "Privacy Policy" subpage:
 
@@ -312,70 +312,70 @@ The project involves the creation of a universal, responsive and interactive web
 
 - A description of the privacy policy is presented and when hovered over, the test is animated.
 
-<br>![project](img/description/photo22.png)
+<br>![project](img/description/photo22.webp)
 
 ## Site tests in "Desktop" format:
 
-<br>![project](img/description/photo23.png)
+<br>![project](img/description/photo23.webp)
 
 The home page looks good in the desktop version, there are no bends or protruding edges anywhere. The navigation bar looks clear, is described and additionally stimulates the imagination through icons.
 
-<br>![project](img/description/photo24.png)
+<br>![project](img/description/photo24.webp)
 
 The gallery and details section is quite transparent in the desktop version, you can see equal spacing from the edges and equal spacing between photos. Everything looks legible and is easy to read.
 
-<br>![project](img/description/photo25.png)
+<br>![project](img/description/photo25.webp)
 
 The slider and product sections have equal indentations and good arrangement, are fully legible and meet the requirements regarding the assumptions.
 
-<br>![project](img/description/photo26.png)
-<br>![project](img/description/photo27.png)
+<br>![project](img/description/photo26.webp)
+<br>![project](img/description/photo27.webp)
 
 The elements are adjusted in such a way that they do not irritate the eyes and encourage people to click on a given product. Certainly their number is not overwhelming and it naturally stimulates the imagination.
 
-<br>![project](img/description/photo28.png)
-<br>![project](img/description/photo29.png)
+<br>![project](img/description/photo28.webp)
+<br>![project](img/description/photo29.webp)
 
 The website ends with a footer section which, in a minimalist way, does not spoil the overall design of the website and fully adapts to selected devices.
 
-<br>![project](img/description/photo30.png)
+<br>![project](img/description/photo30.webp)
 
 The subpages are also correctly arranged and readable, realizing the vision of a comprehensive company.
 
-<br>![project](img/description/photo31.png)
+<br>![project](img/description/photo31.webp)
 
 Contact and payment forms are placed centrally in the middle of the screen, which is certainly pleasing to the eye and suitable for the user.
 
-<br>![project](img/description/photo32.png)
-<br>![project](img/description/photo33.png)
+<br>![project](img/description/photo32.webp)
+<br>![project](img/description/photo33.webp)
 
 The products and their descriptions are matched to each other, which shows that they fit together and do not spoil the vision of combining the whole.
 
 ## Website tests in the "Mobile" format:
 
-<br>![project](img/description/photo34.png)
+<br>![project](img/description/photo34.webp)
 
 The navigation bar looks good, the basket icon is separate to stand out from all the tabs. The logo is constantly placed in the corner of the screen to make it stick in your mind. It stands out and does not overlap with other elements.
 
-<br>![project](img/description/photo35.png)
+<br>![project](img/description/photo35.webp)
 
-<br>![project](img/description/photo36.png)
+<br>![project](img/description/photo36.webp)
 
 As you can see, the photos have changed their position and are still evenly spaced from each other, which meets the vision of a responsive website.
 
-<br>![project](img/description/photo37.png)
+<br>![project](img/description/photo37.webp)
 
 The slider is now ready to scroll slide by slide, so you can still view the products presented in it in a clear way.
 
-<br>![project](img/description/photo38.png)
+<br>![project](img/description/photo38.webp)
 
 The promotion, newsletter and footer bar are also arranged in a clear and responsive way. This shows that the website is fully responsive and well-adjusted.
 
-<br>![project](img/description/photo39.png)
+<br>![project](img/description/photo39.webp)
 
 As you can see, the subpages are also fully responsive and meet the project assumptions. The spacing is even, which makes the website visually pleasing and attracts customers. The navigation bar does not cover too large a field and meets the assumption of a touch field (40px x 40px).
 
-<br>![project](img/description/photo40.png)
+<br>![project](img/description/photo40.webp)
 
 Contact and payment forms are perfectly adapted to mobile devices, they are also legible and meet the requirements of a responsive website.
 
@@ -427,19 +427,19 @@ According to the documentation, the website was subjected to rigorous tests of f
 
 - SEO: A perfect score of 100/100 indicates that the website has been built according to SEO principles, which contributes to its visibility in search results.
 
-<br>![project](img/description/photo40.png)
+<br>![project](img/description/photo40.webp)
 
 ### CSS validation by W3C Validator:
 
 - CSS validation was successful - no errors found. This is a sign that the CSS stylesheet has been written cleanly and according to current standards, ensuring cross-browser compatibility and making it easier to maintain and develop the code.
 
-<br>![project](img/description/photo41.png)
+<br>![project](img/description/photo41.webp)
 
 ### HTML validation by Nu Html Checker:
 
 - Like CSS, the website's HTML also passed validation without errors. This demonstrates the high quality of the code, its compliance with standards, and the fact that it will likely be interpreted well by a variety of browsers and devices.
 
-<br>![project](img/description/photo42.png)
+<br>![project](img/description/photo42.webp)
 
 Each of these tests plays a key role in ensuring quality and professionalism in website design. Good results in performance and SEO tests are especially important for end users and for the website's positioning in search engines. However, CSS and HTML validation results are important from a development perspective because they confirm that the code is well written and will be easier to maintain and develop. Accessibility is important to ensure that all users, regardless of their ability, can use the site. The results achieved indicate that the template is already at a high level, but also point to areas that can be further improved in the future.
 
@@ -461,7 +461,7 @@ All photos used in the project were generated using DALL-E artificial intelligen
 
 In the part of the documentation devoted to the source code, special attention was paid to detailed documentation of the most important CSS functions. The documentation was prepared using the KSS (Knyle Style Sheets) methodology, which allowed for the creation of clear, consistent and easily accessible documentation for all team members. This methodology allows both the description of styles directly in the code and the automatic generation of style guides, which significantly facilitates CSS code management and its subsequent maintenance. KSS documentation for the most important CSS functions covers not only the selectors and properties themselves, but also their use, possible modifications and examples of use, which makes it much easier for other developers to understand and use the code.
 
-<br>![project](img/description/photo43.png)
+<br>![project](img/description/photo43.webp)
 
 The entire documentation is also available at the link [here](https://projekt2.dawidolko.pl/kss/styleguide/).
 
@@ -473,8 +473,8 @@ The JavaScript used in the project is documented using JSDoc, a standard for Jav
 
 Thanks to these methods, documentation becomes an integral part of the project, supporting its transparency, maintenance and further development. The code is friendly to programmers of all skill levels and enables effective project management.
 
-<br>![project](img/description/photo44.png)
-<br>![project](img/description/photo45.png)
+<br>![project](img/description/photo44.webp)
+<br>![project](img/description/photo45.webp)
 
 The entire documentation is also available at the link here: [link](https://projekt2.dawidolko.pl/jsDoc1/out/index.html)
 
@@ -500,7 +500,7 @@ To sum up, code documentation, along with systematic commenting, the use of KSS 
 
 - Commit history: [Link to GitHub repository](https://github.com/dawidolko/Responsive-Website-Design-HTML-CSS-JS/commits/main)
 
-<br>![project](img/description/photo46.png)
+<br>![project](img/description/photo46.webp)
 
 <hr>
 
@@ -508,7 +508,7 @@ To sum up, code documentation, along with systematic commenting, the use of KSS 
 
 ### a) [https://www.seobility.net/en/seocheck/](https://www.seobility.net/en/seocheck/)
 
-<br>![project](img/description/photo47.png)
+<br>![project](img/description/photo47.webp)
 
 Here is a detailed description of the metrics presented in the report:
 
@@ -542,7 +542,7 @@ Overall, the report indicates that while the website performs well in certain as
 
 ### b) [https://developer.chrome.com/docs/lighthouse/](https://developer.chrome.com/docs/lighthouse/)
 
-<br>![project](img/description/photo48.png)
+<br>![project](img/description/photo48.webp)
 
 Here are the results shown in the screenshot, using the data from the photo:
 
