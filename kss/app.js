@@ -70,49 +70,39 @@ function displayProverbAndNavigate(data) {
   window.location.hash = "quote";
 }
 
+// Lokalny fallback z cytatami
+const localQuotes = [
+  { content: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+  { content: "Innovation distinguishes between a leader and a follower.", author: "Steve Jobs" },
+  { content: "Life is what happens when you're busy making other plans.", author: "John Lennon" },
+  { content: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt" },
+  { content: "It is during our darkest moments that we must focus to see the light.", author: "Aristotle" },
+  { content: "Be yourself; everyone else is already taken.", author: "Oscar Wilde" },
+  { content: "The best time to plant a tree was 20 years ago. The second best time is now.", author: "Chinese Proverb" },
+  { content: "Your time is limited, don't waste it living someone else's life.", author: "Steve Jobs" }
+];
+
 // Funkcja, która zwraca Promise do pobrania cytatu z API
 function fetchQuote() {
   return new Promise((resolve, reject) => {
-    // Pierwsze API - ZenQuotes (bardziej niezawodne)
-    fetch("https://zenquotes.io/api/random")
+    // Pierwsze API - DummyJSON (bez problemów z CORS)
+    fetch("https://dummyjson.com/quotes/random")
       .then((response) => {
         if (!response.ok) throw new Error("Primary API failed");
         return response.json();
       })
       .then((data) => {
-        // ZenQuotes zwraca tablicę
-        if (data && data[0]) {
-          resolve({ content: data[0].q, author: data[0].a });
+        if (data && data.quote) {
+          resolve({ content: data.quote, author: data.author });
         } else {
           throw new Error("Invalid response format");
         }
       })
       .catch((error) => {
-        console.warn("Primary API failed, trying fallback:", error);
-        // Fallback API - Quotable
-        fetch("https://api.quotable.io/random")
-          .then((response) => {
-            if (!response.ok) throw new Error("Fallback API failed");
-            return response.json();
-          })
-          .then((data) => resolve(data))
-          .catch((fallbackError) => {
-            console.warn(
-              "Fallback API also failed, trying alternative:",
-              fallbackError,
-            );
-            // Drugi fallback - API Adviceslip
-            fetch("https://api.adviceslip.com/advice")
-              .then((response) => response.json())
-              .then((data) => {
-                if (data && data.slip) {
-                  resolve({ content: data.slip.advice, author: "Anonymous" });
-                } else {
-                  reject(new Error("All APIs failed"));
-                }
-              })
-              .catch((err) => reject(err));
-          });
+        console.warn("Primary API failed, using local quotes:", error);
+        // Lokalny fallback - losowy cytat z tablicy
+        const randomQuote = localQuotes[Math.floor(Math.random() * localQuotes.length)];
+        resolve(randomQuote);
       });
   });
 }
