@@ -1,4 +1,4 @@
-# Design work internet technologies
+# Design work internet technologies 
 
 ## Responsive HTML/CSS/JS website Model website with advanced shopping cart and API [link](https://openweathermap.org)
 
