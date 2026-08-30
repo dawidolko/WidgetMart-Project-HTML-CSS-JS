@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="WidgetMart">
+  <!--
+    Replaces a 32×32 WebP with no alpha channel, which painted a white tile in
+    dark browser tab bars. A transparent SVG adapts to the browser chrome and
+    stays sharp at any density.
+  -->
+  <!-- Four widget tiles, echoing the marketplace grid -->
+  <rect x="10" y="10" width="20" height="20" rx="5" fill="#f2c14e"/>
+  <rect x="34" y="10" width="20" height="20" rx="5" fill="#e8573f"/>
+  <rect x="10" y="34" width="20" height="20" rx="5" fill="#3d8ecf"/>
+  <rect x="34" y="34" width="20" height="20" rx="5" fill="#cfc84e"/>
+  <!-- Glyphs inside the tiles -->
+  <circle cx="20" cy="20" r="5" fill="#fff8dc" opacity="0.9"/>
+  <rect x="39" y="15" width="10" height="10" rx="2.5" fill="#ffe6df" opacity="0.9"/>
+  <path d="M15 41l5 5 5-5" fill="none" stroke="#eaf4ff" stroke-width="3.4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="44" cy="44" r="5" fill="none" stroke="#fbfae0" stroke-width="3.4"/>
+</svg>

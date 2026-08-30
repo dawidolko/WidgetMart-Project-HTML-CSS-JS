@@ -9,7 +9,10 @@
       name="description"
       content="Responsive template - DESIGN PROJECT v2" />
     <title>responsive template - DESIGN PROJECT v2</title>
-    <link rel="icon" href="img/icon.webp" type="image/webp" />
+    <!-- SVG first: transparent, so it sits correctly on a dark tab strip.
+         The WebP stays as a fallback for browsers that skip SVG icons. -->
+    <link rel="icon" type="image/svg+xml" href="img/icon.svg" />
+    <link rel="alternate icon" type="image/webp" href="img/icon.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="css/styleIndex.css" as="style" />
@@ -17,9 +20,37 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Roboto:ital,wght@0,100;1,100&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="css/styleIndex.css" />
+  
+    <!-- Canonical URL: the authoritative address for this page. -->
+    <link rel="canonical" href="https://projekt2.dawidolko.pl/" />
+
+    <!-- Open Graph / Twitter: controls how the page renders when shared. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://projekt2.dawidolko.pl/" />
+    <meta property="og:title" content="WidgetMart" />
+    <meta property="og:description" content="Interactive widget marketplace built with HTML, CSS and JavaScript." />
+    <meta property="og:site_name" content="WidgetMart" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WidgetMart" />
+    <meta name="twitter:description" content="Interactive widget marketplace built with HTML, CSS and JavaScript." />
+
+    <!-- Structured data: lets search engines describe the site in results. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "WidgetMart",
+        "url": "https://projekt2.dawidolko.pl",
+        "description": "Interactive widget marketplace built with HTML, CSS and JavaScript.",
+        "author": { "@type": "Person", "name": "Dawid Olko", "url": "https://dawidolko.pl" }
+      }
+    </script>
   </head>
 
   <body>
+    <!-- First focusable element: lets a keyboard user skip the navigation. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
       <nav>
         <div id="nav">
@@ -353,7 +384,7 @@
           </ol>
           <button class="toggle">Dark mode</button>
           <div class="cart-icon">
-            <a href="./cart.html"
+            <a href="./cart.html" aria-label="Cart"
               ><img
                 src="img/shopping-cart.svg"
                 alt="Cart"
@@ -365,7 +396,8 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main id="main-content" tabindex="-1">
+      <h1 class="visually-hidden">WidgetMart — interaktywny sklep z widgetami</h1>
       <div class="blur-background"></div>
       <div id="container" class="container">
         <div class="clock-div">
@@ -1303,9 +1335,11 @@
             <input
               type="email"
               class="newsletter-input"
+              aria-label="Newsletter email address"
+              autocomplete="email"
               placeholder="Enter your email address"
               required />
-            <button type="submit" class="newsletter-submit-btn">
+            <button type="submit" class="newsletter-submit-btn" aria-label="Zapisz się do newslettera">
               <img
                 src="img/phone.svg"
                 alt="Send"
@@ -1320,7 +1354,7 @@
     <footer>
       <div id="socialmedia">
         <!-- Linki do mediów społecznościowych -->
-        <a href="https://www.facebook.com/" class="social__link"
+        <a href="https://www.facebook.com/" class="social__link" aria-label="Facebook" target="_blank" rel="noopener noreferrer"
           ><img
             src="img/facebook.svg"
             alt="Facebook"
@@ -1328,7 +1362,7 @@
             width="30"
             height="30"
         /></a>
-        <a href="https://www.instagram.com/" class="social__link"
+        <a href="https://www.instagram.com/" class="social__link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"
           ><img
             src="img/instagram.svg"
             alt="Instagram"
@@ -1336,7 +1370,7 @@
             width="30"
             height="30"
         /></a>
-        <a href="https://www.youtube.com/" class="social__link"
+        <a href="https://www.youtube.com/" class="social__link" aria-label="Youtube" target="_blank" rel="noopener noreferrer"
           ><img
             src="img/youtube.svg"
             alt="Youtube"
@@ -1344,7 +1378,7 @@
             width="30"
             height="30"
         /></a>
-        <a href="https://www.twitter.com/" class="social__link"
+        <a href="https://www.twitter.com/" class="social__link" aria-label="Twitter" target="_blank" rel="noopener noreferrer"
           ><img
             src="img/twitter.svg"
             alt="Twitter"
@@ -1368,7 +1402,7 @@
       <div>
         <!-- Dodatkowe informacje lub linki -->
         <p>
-          <a href="https://jigsaw.w3.org/css-validator/check/referer">
+          <a href="https://jigsaw.w3.org/css-validator/check/referer" aria-label="Validate the CSS of this page with the W3C validator">
             <img
               style="border: 0; width: 88px; height: 31px"
               src="https://jigsaw.w3.org/css-validator/images/vcss"
