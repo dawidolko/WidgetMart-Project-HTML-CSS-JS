@@ -13,11 +13,52 @@ document
 
 // Funkcja zmieniająca motyw (ciemny/jasny)
 function toggleTheme() {
-  // Pobierz element kontenera czatu
+  // Motyw przelaczamy na <html>, tak jak robia to pozostale podstrony
+  // (regula `html.dark` w arkuszach). Wczesniej ta funkcja zmieniala tylko
+  // klase na kontenerze czatu, wiec przycisk "change theme" na stronie
+  // glownej nie zmienial niczego poza samym okienkiem czatu.
+  const html = document.documentElement;
+  const isDark = html.classList.toggle("dark");
+
+  // Okno czatu ma wlasny styl ciemny — trzymamy je w zgodzie ze strona.
   const chatContainer = document.querySelector(".chat-container");
-  // Przełącz klasę 'dark-mode', która kontroluje motyw
-  chatContainer.classList.toggle("dark-mode");
+  if (chatContainer) {
+    chatContainer.classList.toggle("dark-mode", isDark);
+  }
+
+  const button = document.getElementById("toggle-theme");
+  if (button) {
+    button.textContent = isDark ? "bright mode" : "change theme";
+    button.setAttribute("aria-pressed", String(isDark));
+  }
+
+  // Wybor przezywa przejscie na inna podstrone i powrot.
+  try {
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  } catch (e) {
+    // Prywatne okno przegladarki potrafi zablokowac zapis — motyw
+    // zadziala, po prostu nie zostanie zapamietany.
+  }
 }
+
+// Przywrocenie zapamietanego motywu przy wejsciu na strone.
+(function restoreTheme() {
+  let saved = null;
+  try {
+    saved = localStorage.getItem("theme");
+  } catch (e) {
+    saved = null;
+  }
+
+  if (saved === "dark") {
+    document.documentElement.classList.add("dark");
+    const button = document.getElementById("toggle-theme");
+    if (button) {
+      button.textContent = "bright mode";
+      button.setAttribute("aria-pressed", "true");
+    }
+  }
+})();
 
 // Funkcja rozwijania/zwijania kontenera czatu
 function toggleChat() {
