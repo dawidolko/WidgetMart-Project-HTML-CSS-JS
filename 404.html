@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
     <meta name="theme-color" content="#8a5103" />
 
     <!-- Per-page SEO: unique title and description on every page. -->
-    <title>FAQ — najczęstsze pytania — WidgetMart</title>
-    <meta name="description" content="Odpowiedzi na najczęstsze pytania o zamówienia, dostawę, płatności i zwroty w sklepie WidgetMart." />
-    <link rel="canonical" href="https://projekt2.dawidolko.pl/faq.html" />
+    <title>Strona nie znaleziona (404) — WidgetMart</title>
+    <meta name="description" content="Ta strona nie istnieje. Wróć na stronę główną WidgetMart lub przejdź do listy produktów." />
 
     <!-- SVG first: transparent, so it sits correctly on a dark tab strip.
          The WebP stays as a fallback for browsers that skip SVG icons. -->
@@ -17,43 +17,21 @@
 
     <!-- Open Graph / Twitter: controls how the page renders when shared. -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://projekt2.dawidolko.pl/faq.html" />
-    <meta property="og:title" content="FAQ — najczęstsze pytania — WidgetMart" />
-    <meta property="og:description" content="Odpowiedzi na najczęstsze pytania o zamówienia, dostawę, płatności i zwroty w sklepie WidgetMart." />
-    <meta property="og:image" content="https://projekt2.dawidolko.pl/img/mainPage2.webp" />
+    <meta property="og:title" content="Strona nie znaleziona (404) — WidgetMart" />
+    <meta property="og:description" content="Polityka prywatności sklepu WidgetMart: jakie dane zbieramy, w jakim celu i jak możesz zarządzać swoimi preferencjami." />
+    <meta property="og:image" content="https://projekt2.dawidolko.pl/img/logo1.webp" />
     <meta property="og:site_name" content="WidgetMart" />
     <meta property="og:locale" content="pl_PL" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="FAQ — najczęstsze pytania — WidgetMart" />
-    <meta name="twitter:description" content="Odpowiedzi na najczęstsze pytania o zamówienia, dostawę, płatności i zwroty w sklepie WidgetMart." />
-    <meta name="twitter:image" content="https://projekt2.dawidolko.pl/img/mainPage2.webp" />
+    <meta name="twitter:title" content="Strona nie znaleziona (404) — WidgetMart" />
+    <meta name="twitter:description" content="Polityka prywatności sklepu WidgetMart: jakie dane zbieramy, w jakim celu i jak możesz zarządzać swoimi preferencjami." />
+    <meta name="twitter:image" content="https://projekt2.dawidolko.pl/img/logo1.webp" />
 
     <!-- Shared design system first, page overrides second. -->
     <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/styleFaq.css" />
+    <link rel="stylesheet" href="css/stylePrivacy.css" />
     <!-- Shop surfaces: overrides the legacy page styles. -->
     <link rel="stylesheet" href="css/shop.css" />
-    <!-- Breadcrumb trail for search results. -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Strona główna",
-            "item": "https://projekt2.dawidolko.pl/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "FAQ",
-            "item": "https://projekt2.dawidolko.pl/faq.html"
-          }
-        ]
-      }
-    </script>
   </head>
 
   <body>
@@ -409,176 +387,21 @@
       </nav>
     </header>
     <main id="main-content" tabindex="-1">
-      <nav class="wm-breadcrumbs" aria-label="Ścieżka nawigacji">
-        <ol>
-          <li><a href="./index.html">Strona główna</a></li>
-          <li><span aria-current="page">FAQ</span></li>
-        </ol>
-      </nav>
-      <div id="container" class="container">
-        <button style="display: none" id="button" class="button">
-          Potwierdź godzinę !
-        </button>
+      <div class="wm-page-head">
+        <h1>404 — nie znaleziono strony</h1>
+        <p>
+          Strona, której szukasz, nie istnieje lub została przeniesiona.
+          Sprawdź adres albo skorzystaj z odnośników poniżej.
+        </p>
       </div>
 
-      <div class="chat-container">
-        <div class="chat-header">
-          <span>DRAW A QUOTE!</span>
-          <button class="przycisk" id="toggle-theme">change theme</button>
-          <button class="przycisk" id="expand-collapse-btn">-</button>
-        </div>
-        <div class="chat-content">
-          <p>See what someone has to say to you today. Think about it...</p>
-          <button class="przycisk" id="get-quote">Download quote</button>
-          <div class="przycisk" id="quote-display"></div>
-        </div>
-      </div>
-
-      <div id="content" class="content hidden">
-        <p id="message" class="message"></p>
-      </div>
-      <div class="wm-page-head" id="faq-section">
-        <h1>Frequently Asked Questions</h1>
-        <p>Odpowiedzi na pytania o zamówienia, dostawę, płatności i zwroty.</p>
-      </div>
-      <section class="faq-category">
-        <h2>General Questions</h2>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Can I order a product to an address different from my home?
-          </summary>
-          <p class="faq-answer">
-            Yes, you can specify an alternative delivery address during the
-            checkout process.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Does your offer include a warranty?
-          </summary>
-          <p class="faq-answer">
-            Yes, all our products come with a standard manufacturer's warranty.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">Is free shipping available?</summary>
-          <p class="faq-answer">
-            Free shipping is available for orders above a certain value.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">How can I track my order?</summary>
-          <p class="faq-answer">
-            After your order has been shipped, you will receive a tracking
-            number that allows you to track your package online.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Can I change my order after placing it?
-          </summary>
-          <p class="faq-answer">
-            Order changes are possible only for a short time after the order is
-            placed.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            What payment methods do you accept?
-          </summary>
-          <p class="faq-answer">
-            We accept credit cards, bank transfers, and electronic payments.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">Can I receive a VAT invoice?</summary>
-          <p class="faq-answer">
-            Yes, a VAT invoice will be sent by email or included with your
-            package upon request.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Do you offer technical support?
-          </summary>
-          <p class="faq-answer">
-            We offer technical support for all of our products.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Can I place an order over the phone?
-          </summary>
-          <p class="faq-answer">
-            Yes, our team is available to take phone orders during business
-            hours.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Are products available in different colors?
-          </summary>
-          <p class="faq-answer">
-            Yes, most products are available in multiple colors, which you can
-            select before adding to the cart.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Can I return a product if I don't like it?
-          </summary>
-          <p class="faq-answer">
-            Yes, we accept returns within a specified period provided the
-            product has not been used.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">Can I cancel my order?</summary>
-          <p class="faq-answer">
-            Yes, orders can be canceled if they have not yet been shipped.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            How can I update my contact details?
-          </summary>
-          <p class="faq-answer">
-            You can update your contact information in the 'My Account' section
-            on our website.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Do you offer discounts for regular customers?
-          </summary>
-          <p class="faq-answer">
-            Yes, we have a loyalty program for our returning customers.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            Where can I find product reviews?
-          </summary>
-          <p class="faq-answer">
-            Customer reviews of the product can be found on the product page
-            under the description.
-          </p>
-        </details>
+      <section class="wm-empty" aria-labelledby="error-links-heading">
+        <h2 id="error-links-heading">Dokąd dalej?</h2>
+        <p>
+          <a class="wm-btn" href="./index.html">Strona główna</a>
+          <a class="wm-btn wm-btn--secondary" href="./product.html">Wszystkie produkty</a>
+          <a class="wm-btn wm-btn--secondary" href="./contact.html">Kontakt</a>
+        </p>
       </section>
     </main>
     <footer>

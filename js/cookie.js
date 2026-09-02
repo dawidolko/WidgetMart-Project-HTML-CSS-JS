@@ -1,33 +1,47 @@
-// Funkcja do ukrywania komunikatu o cookie
-const hideCookieBanner = () => {
-    const cookieContainer = document.querySelector('.cookie');
-    cookieContainer.style.display = 'none';
-};
+/**
+ * Cookie consent banner.
+ *
+ * Fixes over the original:
+ *  - The duplicate #button handler that also wrote 'umowiona_wizyta' was
+ *    removed. It fought with the identical handler in clock.js, wrote the same
+ *    key twice per click, and threw on every page without the meeting widget.
+ *  - Element lookups are guarded; the banner is optional markup.
+ *  - Dismissing moves focus back to the page and the banner is a labelled
+ *    region so screen readers announce it rather than meeting a stray div.
+ */
+(function () {
+  "use strict";
 
-// Sprawdź, czy użytkownik już zaakceptował pliki cookie
-const cookieAccepted = localStorage.getItem('cookieAccepted');
-if (cookieAccepted) {
-    hideCookieBanner();
-}
+  var storage = window.WM && window.WM.storage;
+  var CONSENT_KEY = "cookieAccepted";
 
-// Dodaj obsługę zdarzenia kliknięcia do przycisku "Akceptuj"
-document.addEventListener('DOMContentLoaded', (event) => {
-    const acceptButton = document.querySelector('.cookie__btn');
-    acceptButton.addEventListener('click', () => {
-        localStorage.setItem('cookieAccepted', 'true');
-        hideCookieBanner();
+  function init() {
+    var banner = document.querySelector(".cookie");
+    if (!banner) return;
+
+    var accepted = storage ? storage.readJSON(CONSENT_KEY, null) : null;
+    if (accepted) {
+      banner.hidden = true;
+      banner.style.display = "none";
+      return;
+    }
+
+    var acceptButton = banner.querySelector(".cookie__btn");
+    if (!acceptButton) return;
+
+    acceptButton.addEventListener("click", function () {
+      if (storage) storage.writeJSON(CONSENT_KEY, true);
+      banner.hidden = true;
+      banner.style.display = "none";
+      // The dismissed button held focus; hand it back to the document.
+      var main = document.getElementById("main-content");
+      if (main) main.focus();
     });
-});
+  }
 
-// Dodaj obsługę zapisu danych z formularza do localStorage
-document.addEventListener('DOMContentLoaded', (event) => {
-    const button = document.getElementById("button");
-    button.addEventListener("click", function () {
-        // Pobranie wartości z pól wyboru godziny i minut
-        let input_hour = document.getElementById("select-hour").value;
-        let input_minutes = document.getElementById("input-minutes").value;
-
-        // Zapis informacji do localStorage
-        localStorage.setItem('umowiona_wizyta', `${input_hour}:${input_minutes}`);
-    });
-});
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();

@@ -3,34 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="description"
-      content="Responsive template - DESIGN PROJECT v2" />
-    <title>responsive template - DESIGN PROJECT v2</title>
-    <link rel="icon" href="img/icon.webp" type="image/webp" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Roboto:ital,wght@0,100;1,100&display=swap"
-      rel="stylesheet" />
+    <meta name="theme-color" content="#8a5103" />
+
+    <!-- Per-page SEO: unique title and description on every page. -->
+    <title>Oferta i usługi — WidgetMart</title>
+    <meta name="description" content="Usługi WidgetMart: darmowa dostawa, szybkie płatności i zwroty do 30 dni. Poznaj pełen zakres naszej oferty." />
+    <link rel="canonical" href="https://projekt2.dawidolko.pl/services.html" />
+
+    <!-- SVG first: transparent, so it sits correctly on a dark tab strip.
+         The WebP stays as a fallback for browsers that skip SVG icons. -->
+    <link rel="icon" type="image/svg+xml" href="img/icon.svg" />
+    <link rel="alternate icon" type="image/webp" href="img/icon.webp" />
+
+    <!-- Open Graph / Twitter: controls how the page renders when shared. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://projekt2.dawidolko.pl/services.html" />
+    <meta property="og:title" content="Oferta i usługi — WidgetMart" />
+    <meta property="og:description" content="Usługi WidgetMart: darmowa dostawa, szybkie płatności i zwroty do 30 dni. Poznaj pełen zakres naszej oferty." />
+    <meta property="og:image" content="https://projekt2.dawidolko.pl/img/offer1.webp" />
+    <meta property="og:site_name" content="WidgetMart" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Oferta i usługi — WidgetMart" />
+    <meta name="twitter:description" content="Usługi WidgetMart: darmowa dostawa, szybkie płatności i zwroty do 30 dni. Poznaj pełen zakres naszej oferty." />
+    <meta name="twitter:image" content="https://projekt2.dawidolko.pl/img/offer1.webp" />
+
+    <!-- Shared design system first, page overrides second. -->
+    <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/styleServices.css" />
+    <!-- Shop surfaces: overrides the legacy page styles. -->
+    <link rel="stylesheet" href="css/shop.css" />
+    <!-- Breadcrumb trail for search results. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona główna",
+            "item": "https://projekt2.dawidolko.pl/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Oferta",
+            "item": "https://projekt2.dawidolko.pl/services.html"
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
+    <!-- First focusable element: lets a keyboard user skip the navigation. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
-      <nav>
+      <nav aria-label="Główna nawigacja">
         <div id="nav">
-          <label id="hamburger" for="toggle">☰</label>
+          <label id="hamburger" for="toggle" aria-hidden="true">☰</label>
           <!-- Przycisk menu hamburger dla responsywności -->
-          <input type="checkbox" id="toggle" />
+          <input
+            type="checkbox"
+            id="toggle"
+            class="nav-toggle"
+            aria-label="Rozwiń menu nawigacyjne" />
           <ol id="menu">
             <li class="menuItem">
               <a href="./index.html"
                 ><ruby
                   ><img
                     src="img/home-alt.svg"
-                    alt="home"
+                    alt=""
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -44,7 +89,7 @@
                 ><ruby
                   ><img
                     src="img/collage.svg"
-                    alt="collage"
+                    alt=""
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -57,7 +102,7 @@
                 ><ruby
                   ><img
                     src="img/calendar-next.svg"
-                    alt="calendar"
+                    alt=""
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -70,7 +115,7 @@
                     ><ruby
                       ><img
                         src="img/kids.webp"
-                        alt="calendar"
+                        alt=""
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -83,7 +128,7 @@
                     ><ruby
                       ><img
                         src="img/man.webp"
-                        alt="calendar"
+                        alt=""
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -96,7 +141,7 @@
                     ><ruby
                       ><img
                         src="img/woman.webp"
-                        alt="calendar"
+                        alt=""
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -111,7 +156,7 @@
                 ><ruby
                   ><img
                     src="img/phone.svg"
-                    alt="phone"
+                    alt=""
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -124,7 +169,7 @@
                 ><ruby
                   ><img
                     src="img/color-bucket.svg"
-                    alt="color-bucket"
+                    alt=""
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -137,7 +182,7 @@
                     ><ruby
                       ><img
                         src="img/kids.webp"
-                        alt="calendar"
+                        alt=""
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -150,7 +195,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -163,7 +208,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -176,7 +221,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -189,7 +234,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -204,7 +249,7 @@
                     ><ruby
                       ><img
                         src="img/man.webp"
-                        alt="calendar"
+                        alt=""
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -217,7 +262,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -230,7 +275,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -243,7 +288,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -256,7 +301,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -271,7 +316,7 @@
                     ><ruby
                       ><img
                         src="img/woman.webp"
-                        alt="calendar"
+                        alt=""
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -284,7 +329,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -297,7 +342,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -310,7 +355,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -323,7 +368,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -340,7 +385,7 @@
                 ><ruby
                   ><img
                     src="img/comment.svg"
-                    alt="comment"
+                    alt=""
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -363,7 +408,17 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main id="main-content" tabindex="-1">
+      <nav class="wm-breadcrumbs" aria-label="Ścieżka nawigacji">
+        <ol>
+          <li><a href="./index.html">Strona główna</a></li>
+          <li><span aria-current="page">Oferta</span></li>
+        </ol>
+      </nav>
+      <div class="wm-page-head">
+        <h1>Nasza oferta</h1>
+        <p>Darmowa dostawa, szybkie płatności i zwroty do 30 dni — zobacz, co oferuje WidgetMart.</p>
+      </div>
       <div id="container" class="container">
         <button style="display: none" id="button" class="button">
           Potwierdź godzinę !
@@ -384,7 +439,6 @@
       </div>
 
       <section class="section offer" id="services">
-        <h1 style="display: none">.</h1>
         <div class="offer__container">
           <h2 class="section__heading offer__text">Oferta</h2>
           <div class="offer__box">
@@ -575,17 +629,22 @@
       <div>
         <!-- Dodatkowe informacje lub linki -->
         <p>
-          <a href="https://jigsaw.w3.org/css-validator/check/referer">
-            <img
-              style="border: 0; width: 88px; height: 31px"
-              src="https://jigsaw.w3.org/css-validator/images/vcss"
-              alt="Poprawny CSS!" />
-          </a>
+          <a class="footer__link" href="https://jigsaw.w3.org/css-validator/check/referer"
+             rel="noopener noreferrer" target="_blank">Sprawdź CSS w walidatorze W3C</a>
         </p>
       </div>
     </footer>
-    <script type="module" src="js/app.js"></script>
+    <!-- storage.js first: every other module reads WM.storage. -->
+    <script src="js/storage.js" defer></script>
     <script src="js/darkbrightness.js" defer></script>
+    <script src="js/cookie.js" defer></script>
     <script src="js/cart.js" defer></script>
+    <script src="js/shop.js" defer></script>
+    <script src="js/forms.js" defer></script>
+    <script type="module" src="js/app.js"></script>
+
+    <!-- Cart feedback: announced to assistive tech, shown visually as a toast. -->
+    <div id="cartLiveRegion" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div id="cartToast" class="wm-toast" aria-hidden="true"></div>
   </body>
 </html>

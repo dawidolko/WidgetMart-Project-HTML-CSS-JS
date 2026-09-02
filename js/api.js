@@ -1,204 +1,266 @@
-// Deklaruj zmienną do przechowywania wyszukanego miasta
-var city = "";
-// Deklaracje zmiennych
-var searchCity = document.getElementById("search-city");
-var searchButton = document.getElementById("search-button");
-var clearButton = document.getElementById("clear-history");
-var currentCity = document.getElementById("current-city");
-var currentTemperature = document.getElementById("temperature");
-var currentHumidity = document.getElementById("humidity");
-var currentWSpeed = document.getElementById("wind-speed");
-var currentUvindex = document.getElementById("uv-index");
-var sCity = [];
+/**
+ * Weather widget (OpenWeatherMap).
+ *
+ * Fixes over the original:
+ *  - Every listener was attached at top level to elements that only exist on
+ *    index.html, so this file threw on all other pages. It now bails out early.
+ *  - `loadLastCity` read `sCity[i - 1]` outside the loop, where `i` was the
+ *    loop counter left at length — it worked by accident and threw when the
+ *    history was empty.
+ *  - The search history was rebuilt with a global click listener on the whole
+ *    document; it is now scoped to the list and uses real <button> elements
+ *    so entries are keyboard reachable.
+ *  - alert() on failure was replaced with an in-page aria-live message.
+ *  - Errors from the network are caught, so a dead API no longer leaves the
+ *    widget in a permanent "loading" state.
+ *
+ * Note: the API key below is a client-side key from the original project and
+ * is visible to anyone viewing source. It is left as-is to avoid changing
+ * behaviour, but it should be replaced with a proxied request if this were
+ * ever more than a coursework demo.
+ */
+(function () {
+  "use strict";
 
-// Funkcja sprawdza, czy miasto istnieje w historii
-function find(c) {
-  for (var i = 0; i < sCity.length; i++) {
-    if (c.toUpperCase() === sCity[i]) {
-      return -1;
+  var API_KEY = "a0aca8a89948154a4182dcecc780b513";
+  var HISTORY_KEY = "cityname";
+  var storage = window.WM && window.WM.storage;
+
+  function init() {
+    var searchCity = document.getElementById("search-city");
+    var searchButton = document.getElementById("search-button");
+    var clearButton = document.getElementById("clear-history");
+    var historyList = document.getElementById("search-history");
+
+    // The weather panel only exists on the home page.
+    if (!searchCity || !searchButton) return;
+
+    var currentCity = document.getElementById("current-city");
+    var currentTemperature = document.getElementById("temperature");
+    var currentHumidity = document.getElementById("humidity");
+    var currentWSpeed = document.getElementById("wind-speed");
+    var currentUvindex = document.getElementById("uv-index");
+    var statusRegion = document.getElementById("weather-status");
+
+    function setStatus(message) {
+      if (statusRegion) statusRegion.textContent = message;
     }
-  }
-  return 1;
-}
 
-// Ustawienie klucza API
-var APIKey = "a0aca8a89948154a4182dcecc780b513";
+    function history() {
+      var stored = storage ? storage.readJSON(HISTORY_KEY, []) : [];
+      return Array.isArray(stored) ? stored : [];
+    }
 
-// Wyświetlenie aktualnej i przyszłej pogody po wprowadzeniu miasta
-function displayWeather(event) {
-  event.preventDefault();
-  if (searchCity.value.trim() !== "") {
-    city = searchCity.value.trim();
-    currentWeather(city);
-  }
-}
+    function saveHistory(list) {
+      if (storage) storage.writeJSON(HISTORY_KEY, list);
+    }
 
-// Funkcja do wywołania API pogodowego
-function currentWeather(city) {
-  // Budowanie URL-a do pobrania danych z serwera
-  var queryURL =
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
-    city +
-    "&APPID=" +
-    APIKey;
+    function addToList(name) {
+      if (!historyList) return;
+      var item = document.createElement("li");
+      item.className = "list-group-item";
 
-  // Wywołanie API za pomocą XMLHttpRequest
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", queryURL, true);
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-      var response = JSON.parse(xhr.responseText);
+      // A <button> so the entry is reachable by keyboard; the original used a
+      // bare <li> that only responded to mouse clicks.
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "wm-btn wm-btn--ghost history-item";
+      button.textContent = name.toUpperCase();
+      button.addEventListener("click", function () {
+        loadWeather(name);
+      });
 
-      // Pobranie ikony pogody
-      var weatherIcon = response.weather[0].icon;
-      var iconURL = "https://openweathermap.org/img/wn/" + weatherIcon + "@2x.png";
+      item.appendChild(button);
+      historyList.appendChild(item);
+    }
 
-      // Pobranie daty
-      var date = new Date(response.dt * 1000).toLocaleDateString();
+    function renderHistory() {
+      if (!historyList) return;
+      historyList.innerHTML = "";
+      history().forEach(addToList);
+    }
 
-      // Wyświetlenie danych
-      currentCity.innerHTML = response.name + " (" + date + ") " + "<img src=" + iconURL + ">";
-      var tempF = (response.main.temp - 273.15);
-      currentTemperature.innerHTML = tempF.toFixed(2) + "&#8451";
-      currentHumidity.innerHTML = response.main.humidity + "%";
-      var ws = response.wind.speed;
-      var windSmph = (ws * 2.237).toFixed(1);
-      currentWSpeed.innerHTML = windSmph + "MPH";
-      UVIndex(response.coord.lon, response.coord.lat);
-      forecast(response.id);
+    function request(url) {
+      return fetch(url).then(function (response) {
+        if (!response.ok) {
+          throw new Error(
+            response.status === 404
+              ? "Nie znaleziono miasta."
+              : "Błąd serwera pogodowego (" + response.status + ")."
+          );
+        }
+        return response.json();
+      });
+    }
 
-      // Zapis miasta do historii
-      sCity = JSON.parse(localStorage.getItem("cityname")) || [];
-      if (find(city) > 0) {
-        sCity.push(city.toUpperCase());
-        localStorage.setItem("cityname", JSON.stringify(sCity));
-        addToList(city);
+    function loadUVIndex(lon, lat) {
+      return request(
+        "https://api.openweathermap.org/data/2.5/uvi?appid=" +
+          API_KEY +
+          "&lat=" +
+          encodeURIComponent(lat) +
+          "&lon=" +
+          encodeURIComponent(lon)
+      )
+        .then(function (data) {
+          if (currentUvindex) currentUvindex.textContent = data.value;
+        })
+        .catch(function () {
+          // Non-critical: leave the field blank rather than failing the lookup.
+          if (currentUvindex) currentUvindex.textContent = "—";
+        });
+    }
+
+    function loadForecast(cityId) {
+      return request(
+        "https://api.openweathermap.org/data/2.5/forecast?id=" +
+          encodeURIComponent(cityId) +
+          "&appid=" +
+          API_KEY
+      )
+        .then(function (data) {
+          if (!data.list) return;
+          for (var i = 0; i < 5; i++) {
+            var entry = data.list[(i + 1) * 8 - 1];
+            if (!entry) continue;
+
+            var dateNode = document.getElementById("fDate" + i);
+            var imgNode = document.getElementById("fImg" + i);
+            var tempNode = document.getElementById("fTemp" + i);
+            var humidityNode = document.getElementById("fHumidity" + i);
+
+            if (dateNode) {
+              dateNode.textContent = new Date(
+                entry.dt * 1000
+              ).toLocaleDateString();
+            }
+            if (imgNode) {
+              imgNode.innerHTML = "";
+              var icon = document.createElement("img");
+              icon.src =
+                "https://openweathermap.org/img/wn/" +
+                entry.weather[0].icon +
+                ".png";
+              icon.alt = entry.weather[0].description || "";
+              icon.width = 50;
+              icon.height = 50;
+              imgNode.appendChild(icon);
+            }
+            if (tempNode) {
+              tempNode.textContent =
+                (entry.main.temp - 273.15).toFixed(1) + " °C";
+            }
+            if (humidityNode) {
+              humidityNode.textContent = entry.main.humidity + "%";
+            }
+          }
+        })
+        .catch(function (error) {
+          console.warn("Forecast unavailable:", error);
+        });
+    }
+
+    function loadWeather(city) {
+      var name = String(city || "").trim();
+      if (!name) return;
+
+      setStatus("Wyszukiwanie pogody dla: " + name + "…");
+
+      request(
+        "https://api.openweathermap.org/data/2.5/weather?q=" +
+          encodeURIComponent(name) +
+          "&APPID=" +
+          API_KEY
+      )
+        .then(function (data) {
+          if (currentCity) {
+            currentCity.textContent =
+              data.name +
+              " (" +
+              new Date(data.dt * 1000).toLocaleDateString() +
+              ")";
+            var icon = document.createElement("img");
+            icon.src =
+              "https://openweathermap.org/img/wn/" +
+              data.weather[0].icon +
+              "@2x.png";
+            icon.alt = data.weather[0].description || "";
+            icon.width = 50;
+            icon.height = 50;
+            currentCity.appendChild(icon);
+          }
+          if (currentTemperature) {
+            currentTemperature.textContent =
+              (data.main.temp - 273.15).toFixed(1) + " °C";
+          }
+          if (currentHumidity) {
+            currentHumidity.textContent = data.main.humidity + "%";
+          }
+          if (currentWSpeed) {
+            currentWSpeed.textContent =
+              (data.wind.speed * 2.237).toFixed(1) + " MPH";
+          }
+
+          loadUVIndex(data.coord.lon, data.coord.lat);
+          loadForecast(data.id);
+
+          // Record the city if it is not already in the history.
+          var list = history();
+          var upper = name.toUpperCase();
+          if (
+            list.every(function (entry) {
+              return String(entry).toUpperCase() !== upper;
+            })
+          ) {
+            list.push(name);
+            saveHistory(list);
+            addToList(name);
+          }
+
+          setStatus("Pogoda dla " + data.name + " została załadowana.");
+        })
+        .catch(function (error) {
+          console.warn("Weather lookup failed:", error);
+          setStatus(error.message || "Nie udało się pobrać pogody.");
+        });
+    }
+
+    /* ------------------------------------------------------------ events */
+
+    searchButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      loadWeather(searchCity.value);
+    });
+
+    searchCity.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        loadWeather(searchCity.value);
       }
-    } else if (xhr.status === 404) {
-      // Obsługa błędu, gdy miasto nie zostało znalezione
-      alert("Błąd: Nie znaleziono miasta. Spróbuj ponownie.");
-    } else {
-      // Obsługa innych błędów
-      console.log("Błąd: " + xhr.status);
-      alert("Wystąpił błąd podczas wyszukiwania miasta. Sprawdź połączenie internetowe lub spróbuj ponownie później.");
+    });
+
+    if (clearButton) {
+      clearButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        if (storage) storage.remove(HISTORY_KEY);
+        renderHistory();
+        setStatus("Historia wyszukiwania została wyczyszczona.");
+        // The original reloaded the page; clearing in place is less disruptive.
+      });
     }
-  };
-  xhr.onerror = function () {
-    // Obsługa błędu sieciowego
-    alert("Błąd sieci: Nie można nawiązać połączenia z serwerem.");
-  };
-  xhr.send();
-}
 
-// Funkcja do pobrania UV Index
-function UVIndex(ln, lt) {
-  var uvqURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + lt + "&lon=" + ln;
+    renderHistory();
 
-  // Wywołanie API za pomocą XMLHttpRequest
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", uvqURL, true);
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-      var response = JSON.parse(xhr.responseText);
-      currentUvindex.innerHTML = response.value;
-    } else {
-      console.log("Błąd: " + xhr.status);
+    // Restore the most recently searched city, if there is one.
+    var saved = history();
+    if (saved.length > 0) {
+      loadWeather(saved[saved.length - 1]);
     }
-  };
-  xhr.send();
-}
-
-// Funkcja do wyświetlenia prognozy na 5 dni
-function forecast(cityid) {
-  var dayover = false;
-  var queryForcastURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityid + "&appid=" + APIKey;
-
-  // Wywołanie API za pomocą XMLHttpRequest
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", queryForcastURL, true);
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-      var response = JSON.parse(xhr.responseText);
-
-      for (var i = 0; i < 5; i++) {
-        var date = new Date(response.list[((i + 1) * 8) - 1].dt * 1000).toLocaleDateString();
-        var iconCode = response.list[((i + 1) * 8) - 1].weather[0].icon;
-        var iconURL = "https://openweathermap.org/img/wn/" + iconCode + ".png";
-        var tempK = response.list[((i + 1) * 8) - 1].main.temp;
-        var tempF = ((tempK - 273.5)).toFixed(2);
-        var humidity = response.list[((i + 1) * 8) - 1].main.humidity;
-
-        document.getElementById("fDate" + i).innerHTML = date;
-        document.getElementById("fImg" + i).innerHTML = "<img src=" + iconURL + ">";
-        document.getElementById("fTemp" + i).innerHTML = tempF + "&#8451";
-        document.getElementById("fHumidity" + i).innerHTML = humidity + "%";
-      }
-    } else {
-      console.log("Błąd: " + xhr.status);
-    }
-  };
-  xhr.send();
-}
-
-// Dodaj miasto do historii
-function addToList(c) {
-  var listEl = document.createElement("li");
-  listEl.textContent = c.toUpperCase();
-  listEl.className = "list-group-item";
-  listEl.dataset.value = c.toUpperCase();
-  document.querySelector(".list-group").appendChild(listEl);
-}
-
-// Wywołaj wcześniejsze wyszukiwanie po kliknięciu na element historii
-function invokePastSearch(event) {
-  var liEl = event.target;
-  if (liEl.matches("li")) {
-    city = liEl.textContent.trim();
-    currentWeather(city);
   }
-}
 
-// Załaduj ostatnie miasto z historii
-function loadLastCity() {
-  document.querySelector("ul").innerHTML = "";
-  var sCity = JSON.parse(localStorage.getItem("cityname"));
-  if (sCity !== null) {
-    for (var i = 0; i < sCity.length; i++) {
-      addToList(sCity[i]);
-    }
-    city = sCity[i - 1];
-    currentWeather(city);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
   }
-}
-
-// Wyczyść historię wyszukiwania
-function clearHistory(event) {
-  event.preventDefault();
-  sCity = [];
-  localStorage.removeItem("cityname");
-  location.reload();
-}
-
-// Dodaj obsługę zdarzenia keydown na polu do wprowadzania miasta
-searchCity.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    displayWeather(event);
-  }
-});
-
-// Zaktualizuj funkcję displayWeather, aby obsługiwała również wciśnięcie Enter
-function displayWeather(event) {
-  if (event) {
-    event.preventDefault();
-  }
-  if (searchCity.value.trim() !== "") {
-    city = searchCity.value.trim();
-    currentWeather(city);
-  }
-}
-
-// Obsługa zdarzeń
-searchButton.addEventListener("click", displayWeather);
-document.addEventListener("click", invokePastSearch);
-window.addEventListener("load", loadLastCity);
-clearButton.addEventListener("click", clearHistory);
+})();
