@@ -3,73 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#8a5103" />
-
-    <!-- Per-page SEO: unique title and description on every page. -->
-    <title>WidgetMart — sklep z widgetami i gadżetami</title>
-    <meta name="description" content="WidgetMart to sklep z widgetami i gadżetami dla kobiet, mężczyzn i dzieci. Przeglądaj kolekcje, korzystaj z wyszukiwarki i zamawiaj online." />
-    <link rel="canonical" href="https://projekt2.dawidolko.pl/" />
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="Responsive template - DESIGN PROJECT v2" />
+    <title>responsive template - DESIGN PROJECT v2</title>
     <!-- SVG first: transparent, so it sits correctly on a dark tab strip.
          The WebP stays as a fallback for browsers that skip SVG icons. -->
     <link rel="icon" type="image/svg+xml" href="img/icon.svg" />
     <link rel="alternate icon" type="image/webp" href="img/icon.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="css/styleIndex.css" as="style" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Roboto:ital,wght@0,100;1,100&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/styleIndex.css" />
+  
+    <!-- Canonical URL: the authoritative address for this page. -->
+    <link rel="canonical" href="https://projekt2.dawidolko.pl/" />
 
     <!-- Open Graph / Twitter: controls how the page renders when shared. -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://projekt2.dawidolko.pl/" />
-    <meta property="og:title" content="WidgetMart — sklep z widgetami i gadżetami" />
-    <meta property="og:description" content="WidgetMart to sklep z widgetami i gadżetami dla kobiet, mężczyzn i dzieci. Przeglądaj kolekcje, korzystaj z wyszukiwarki i zamawiaj online." />
-    <meta property="og:image" content="https://projekt2.dawidolko.pl/img/mainPage1.webp" />
+    <meta property="og:title" content="WidgetMart" />
+    <meta property="og:description" content="Interactive widget marketplace built with HTML, CSS and JavaScript." />
     <meta property="og:site_name" content="WidgetMart" />
-    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="WidgetMart — sklep z widgetami i gadżetami" />
-    <meta name="twitter:description" content="WidgetMart to sklep z widgetami i gadżetami dla kobiet, mężczyzn i dzieci. Przeglądaj kolekcje, korzystaj z wyszukiwarki i zamawiaj online." />
-    <meta name="twitter:image" content="https://projekt2.dawidolko.pl/img/mainPage1.webp" />
-
-    <!-- Shared design system first, page overrides second. -->
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/styleIndex.css" />
-    <!-- Shop surfaces: overrides the legacy page styles. -->
-    <link rel="stylesheet" href="css/shop.css" />
+    <meta name="twitter:title" content="WidgetMart" />
+    <meta name="twitter:description" content="Interactive widget marketplace built with HTML, CSS and JavaScript." />
 
     <!-- Structured data: lets search engines describe the site in results. -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Organization",
-            "@id": "https://projekt2.dawidolko.pl/#organization",
-            "name": "WidgetMart",
-            "url": "https://projekt2.dawidolko.pl/",
-            "logo": "https://projekt2.dawidolko.pl/img/logo1.webp",
-            "sameAs": [
-              "https://www.facebook.com/",
-              "https://www.instagram.com/",
-              "https://www.youtube.com/",
-              "https://www.twitter.com/"
-            ]
-          },
-          {
-            "@type": "WebSite",
-            "@id": "https://projekt2.dawidolko.pl/#website",
-            "name": "WidgetMart",
-            "url": "https://projekt2.dawidolko.pl/",
-            "description": "Sklep z widgetami i gadżetami dla kobiet, mężczyzn i dzieci.",
-            "inLanguage": "pl-PL",
-            "publisher": { "@id": "https://projekt2.dawidolko.pl/#organization" },
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": {
-                "@type": "EntryPoint",
-                "urlTemplate": "https://projekt2.dawidolko.pl/product.html?q={search_term_string}"
-              },
-              "query-input": "required name=search_term_string"
-            }
-          }
-        ]
+        "@type": "WebSite",
+        "name": "WidgetMart",
+        "url": "https://projekt2.dawidolko.pl",
+        "description": "Interactive widget marketplace built with HTML, CSS and JavaScript.",
+        "author": { "@type": "Person", "name": "Dawid Olko", "url": "https://dawidolko.pl" }
       }
     </script>
   </head>
@@ -78,22 +52,18 @@
     <!-- First focusable element: lets a keyboard user skip the navigation. -->
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
-      <nav aria-label="Główna nawigacja">
+      <nav>
         <div id="nav">
-          <label id="hamburger" for="toggle" aria-hidden="true">☰</label>
+          <label id="hamburger" for="toggle">☰</label>
           <!-- Przycisk menu hamburger dla responsywności -->
-          <input
-            type="checkbox"
-            id="toggle"
-            class="nav-toggle"
-            aria-label="Rozwiń menu nawigacyjne" />
+          <input type="checkbox" id="toggle" />
           <ol id="menu">
             <li class="menuItem">
               <a href="./index.html"
                 ><ruby
                   ><img
                     src="img/home-alt.svg"
-                    alt=""
+                    alt="home"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -107,7 +77,7 @@
                 ><ruby
                   ><img
                     src="img/collage.svg"
-                    alt=""
+                    alt="collage"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -120,7 +90,7 @@
                 ><ruby
                   ><img
                     src="img/calendar-next.svg"
-                    alt=""
+                    alt="calendar"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -133,7 +103,7 @@
                     ><ruby
                       ><img
                         src="img/kids.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -146,7 +116,7 @@
                     ><ruby
                       ><img
                         src="img/man.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -159,7 +129,7 @@
                     ><ruby
                       ><img
                         src="img/woman.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -174,7 +144,7 @@
                 ><ruby
                   ><img
                     src="img/phone.svg"
-                    alt=""
+                    alt="phone"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -187,7 +157,7 @@
                 ><ruby
                   ><img
                     src="img/color-bucket.svg"
-                    alt=""
+                    alt="color-bucket"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -200,7 +170,7 @@
                     ><ruby
                       ><img
                         src="img/kids.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -213,7 +183,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -226,7 +196,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -239,7 +209,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -252,7 +222,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -267,7 +237,7 @@
                     ><ruby
                       ><img
                         src="img/man.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -280,7 +250,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -293,7 +263,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -306,7 +276,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -319,7 +289,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -334,7 +304,7 @@
                     ><ruby
                       ><img
                         src="img/woman.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -347,7 +317,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -360,7 +330,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -373,7 +343,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -386,7 +356,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -403,7 +373,7 @@
                 ><ruby
                   ><img
                     src="img/comment.svg"
-                    alt=""
+                    alt="comment"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -429,7 +399,6 @@
     <main id="main-content" tabindex="-1">
       <h1 class="visually-hidden">WidgetMart — interaktywny sklep z widgetami</h1>
       <div class="blur-background"></div>
-      <h2 class="visually-hidden">Umów spotkanie</h2>
       <div id="container" class="container">
         <div class="clock-div">
           <div class="clock-container">
@@ -476,35 +445,30 @@
         <p id="message" class="message"></p>
       </div>
 
-      <h2 class="visually-hidden">Pogoda</h2>
       <div class="containerApi">
         <!-- Wiersz wyszukiwania miasta -->
         <div class="row">
           <div class="szukaj">
             <div class="col">
               <!-- Formularz do wyszukiwania miasta -->
-              <h3 class="City">Search for a City</h3>
+              <h4 class="City"><strong>Search for a City:</strong></h4>
               <div class="input-group">
-                <label for="search-city" class="wm-label">Nazwa miasta</label>
                 <input
-                  type="search"
-                  class="form-control wm-input"
+                  type="text"
+                  class="form-control"
                   id="search-city"
                   placeholder="Enter the city"
-                  autocomplete="off" />
+                  aria-label="City Search"
+                  aria-describedby="search-button" />
                 <div class="input-group-append">
-                  <button class="btn btn-primary wm-btn" type="button" id="search-button">
-                    Szukaj
-                  </button>
+                  <button class="btn btn-primary" id="search-button">🔍</button>
                 </div>
               </div>
-              <!-- Weather results are loaded asynchronously; announce them. -->
-              <p class="wm-status" id="weather-status" role="status" aria-live="polite"></p>
-              <button class="btn-mt-2 wm-btn wm-btn--secondary" type="button" id="clear-history">
+              <!-- Sekcja historii wyszukiwania miasta -->
+              <button class="btn-mt-2" type="button" id="clear-history">
                 Clear History
               </button>
-              <h3 class="visually-hidden" id="history-heading">Historia wyszukiwania</h3>
-              <ul class="list-group mt-2" id="search-history" aria-labelledby="history-heading"></ul>
+              <ul class="list-group mt-2" id="search-history"></ul>
             </div>
             <div class="row">
               <div class="col-row" id="current-weather">
@@ -558,9 +522,9 @@
       </div>
       <!-- Główna sekcja strony -->
       <section class="photoFirst">
-        <h2 class="visually-hidden">Wybrane zdjęcia</h2>
         <!-- Sekcja pierwszego zestawu zdjęć -->
         <!-- Obrazy i tekst w tej sekcji -->
+        <h2 style="display: none">.</h2>
         <img
           id="photos1"
           src="img/mainPage4.webp"
@@ -590,26 +554,53 @@
         >LOAD MORE PHOTO</label
       >
 
-      <!-- Purely decorative mascot animation. Local SVGs replace the
-           third-party CDN images the page used to hot-link; alt="" keeps
-           them out of the accessibility tree. -->
-      <div class="photoSecond" aria-hidden="true">
+      <div class="photoSecond">
         <div class="animation">
-          <img class="glasses" src="img/glasses-1.svg" alt="" width="140" height="140" loading="lazy" />
-          <img class="logoCat" src="img/mascot.svg" alt="" width="140" height="140" loading="lazy" />
+          <img
+            class="glasses"
+            src="https://kibbles.klausapp.com/assets/img/loader/glasses-regular.svg"
+            alt="oksy1"
+            width="140"
+            height="140" />
+          <img
+            class="logoCat"
+            src="https://kibbles.klausapp.com/assets/img/loader/main.svg"
+            alt="cot1"
+            width="140"
+            height="140" />
         </div>
         <div class="animation">
-          <img class="glasses" src="img/glasses-2.svg" alt="" width="140" height="140" loading="lazy" />
-          <img class="logoCat" src="img/mascot.svg" alt="" width="140" height="140" loading="lazy" />
+          <img
+            class="glasses"
+            src="https://kibbles.klausapp.com/assets/img/loader/glasses-deal-with-it.svg"
+            alt="oksy2"
+            width="140"
+            height="140" />
+          <img
+            class="logoCat"
+            src="https://kibbles.klausapp.com/assets/img/loader/main.svg"
+            alt="cot2"
+            width="140"
+            height="140" />
         </div>
         <div class="animation">
-          <img class="glasses" src="img/glasses-3.svg" alt="" width="140" height="140" loading="lazy" />
-          <img class="logoCat" src="img/mascot.svg" alt="" width="140" height="140" loading="lazy" />
+          <img
+            class="glasses"
+            src="https://kibbles.klausapp.com/assets/img/loader/glasses-hearts.svg"
+            alt="oksy3"
+            width="140"
+            height="140" />
+          <img
+            class="logoCat"
+            src="https://kibbles.klausapp.com/assets/img/loader/main.svg"
+            alt="cot3"
+            width="140"
+            height="140" />
         </div>
       </div>
 
       <section class="photoSecond">
-        <h2 class="visually-hidden">Więcej zdjęć</h2>
+        <h2 style="display: none">.</h2>
         <img
           class="photosX"
           src="img/mainPage1.webp"
@@ -641,7 +632,6 @@
         <canvas id="logoCanvas"></canvas>
       </div>
 
-      <h2 class="visually-hidden">Polecane kolekcje</h2>
       <div class="product-grid">
         <div class="product-item" style="background-color: #eae9e7">
           <div class="product-image">
@@ -825,42 +815,46 @@
             </div>
           </div>
         </div>
-        <div class="slider-controls" role="group" aria-label="Wybór slajdu">
+        <div class="slider-controls">
           <input
             type="radio"
             id="slide-radio-1v2"
             name="slide"
-            class="slider-radio"None />
-          <label for="slide-radio-1v2" class="slider-label">
-            <span class="visually-hidden">Pokaż slajd 1</span>
-          </label>
+            class="slider-radio" />
+          <label
+            for="slide-radio-1v2"
+            class="slider-label"
+            onclick="window.location.href = '#slide-1'"></label>
 
           <input
             type="radio"
             id="slide-radio-2v2"
             name="slide"
-            class="slider-radio"None />
-          <label for="slide-radio-2v2" class="slider-label">
-            <span class="visually-hidden">Pokaż slajd 2</span>
-          </label>
+            class="slider-radio" />
+          <label
+            for="slide-radio-2v2"
+            class="slider-label"
+            onclick="window.location.href = '#slide-2'"></label>
 
           <input
             type="radio"
             id="slide-radio-3v2"
             name="slide"
-            class="slider-radio"None />
-          <label for="slide-radio-3v2" class="slider-label">
-            <span class="visually-hidden">Pokaż slajd 3</span>
-          </label>
+            class="slider-radio" />
+          <label
+            for="slide-radio-3v2"
+            class="slider-label"
+            onclick="window.location.href = '#slide-3'"></label>
 
           <input
             type="radio"
             id="slide-radio-4v2"
             name="slide"
-            class="slider-radio"None />
-          <label for="slide-radio-4v2" class="slider-label">
-            <span class="visually-hidden">Pokaż slajd 4</span>
-          </label>
+            class="slider-radio" />
+          <label
+            for="slide-radio-4v2"
+            class="slider-label"
+            onclick="window.location.href = '#slide-4'"></label>
 
           <input
             type="radio"
@@ -868,49 +862,53 @@
             name="slide"
             class="slider-radio"
             checked />
-          <label for="slide-radio-5v2" class="slider-label">
-            <span class="visually-hidden">Pokaż slajd 5</span>
-          </label>
+          <label
+            for="slide-radio-5v2"
+            class="slider-label"
+            onclick="window.location.href = '#slide-5'"></label>
 
           <input
             type="radio"
             id="slide-radio-6v2"
             name="slide"
-            class="slider-radio"None />
-          <label for="slide-radio-6v2" class="slider-label">
-            <span class="visually-hidden">Pokaż slajd 6</span>
-          </label>
+            class="slider-radio" />
+          <label
+            for="slide-radio-6v2"
+            class="slider-label"
+            onclick="window.location.href = '#slide-6'"></label>
 
           <input
             type="radio"
             id="slide-radio-7v2"
             name="slide"
-            class="slider-radio"None />
-          <label for="slide-radio-7v2" class="slider-label">
-            <span class="visually-hidden">Pokaż slajd 7</span>
-          </label>
+            class="slider-radio" />
+          <label
+            for="slide-radio-7v2"
+            class="slider-label"
+            onclick="window.location.href = '#slide-7'"></label>
 
           <input
             type="radio"
             id="slide-radio-8v2"
             name="slide"
-            class="slider-radio"None />
-          <label for="slide-radio-8v2" class="slider-label">
-            <span class="visually-hidden">Pokaż slajd 8</span>
-          </label>
+            class="slider-radio" />
+          <label
+            for="slide-radio-8v2"
+            class="slider-label"
+            onclick="window.location.href = '#slide-8'"></label>
 
           <input
             type="radio"
             id="slide-radio-9v2"
             name="slide"
-            class="slider-radio"None />
-          <label for="slide-radio-9v2" class="slider-label">
-            <span class="visually-hidden">Pokaż slajd 9</span>
-          </label>
+            class="slider-radio" />
+          <label
+            for="slide-radio-9v2"
+            class="slider-label"
+            onclick="window.location.href = '#slide-9'"></label>
         </div>
       </section>
 
-      <h2 class="visually-hidden">Bestsellery</h2>
       <div class="product-grid1">
         <div class="product-item1">
           <img
@@ -1064,7 +1062,6 @@
         </div>
       </div>
 
-      <h2 class="visually-hidden">Nowości</h2>
       <div class="product-grid2">
         <div class="product-item1">
           <img
@@ -1219,7 +1216,6 @@
       </div>
 
       <section class="collection">
-        <h2 class="visually-hidden">Kolekcje produktowe</h2>
         <div class="collection__men">
           <h3 class="collection__heading">Product 1 Collection</h3>
           <div class="collection__shadow">
@@ -1261,7 +1257,7 @@
         </div>
       </section>
       <section class="offer">
-        <h2 class="visually-hidden">Oferta specjalna</h2>
+        <h2 style="display: none">.</h2>
         <div class="offer__body">
           <img
             src="img/logo1transparent.webp"
@@ -1283,7 +1279,6 @@
       </section>
 
       <section class="service">
-        <h2 class="visually-hidden">Nasze usługi</h2>
         <div class="service__content container">
           <div class="service__box">
             <img
@@ -1293,7 +1288,7 @@
               width="150"
               height="150" />
             <div class="service__text">
-              <h3 class="service__title">FREE SHIPING</h3>
+              <h4 class="service__title">FREE SHIPING</h4>
               <p class="service__describe">All Lorem ipsum $150</p>
             </div>
           </div>
@@ -1305,7 +1300,7 @@
               width="150"
               height="150" />
             <div class="service__text">
-              <h3 class="service__title">QUICK PAYMENT</h3>
+              <h4 class="service__title">QUICK PAYMENT</h4>
               <p class="service__describe">100% Lorem ipsum</p>
             </div>
           </div>
@@ -1317,7 +1312,7 @@
               width="150"
               height="150" />
             <div class="service__text">
-              <h3 class="service__title">FREE RETURNS</h3>
+              <h4 class="service__title">FREE RETURNS</h4>
               <p class="service__describe">Lorem ipsum 30 days</p>
             </div>
           </div>
@@ -1336,24 +1331,22 @@
               Subscribe for the latest stories and promotions
             </p>
           </div>
-          <form class="newsletter-form" novalidate>
-            <div class="wm-field">
-              <label for="newsletterEmail">Adres e-mail</label>
-              <input
-                type="email"
-                id="newsletterEmail"
-                name="email"
-                class="newsletter-input wm-input"
-                autocomplete="email"
-                placeholder="Enter your email address"
-                aria-describedby="newsletterStatus"
-                required
-                aria-invalid="false" />
-            </div>
-            <button type="submit" class="newsletter-submit-btn wm-btn">
-              Zapisz się
+          <form class="newsletter-form">
+            <input
+              type="email"
+              class="newsletter-input"
+              aria-label="Newsletter email address"
+              autocomplete="email"
+              placeholder="Enter your email address"
+              required />
+            <button type="submit" class="newsletter-submit-btn" aria-label="Zapisz się do newslettera">
+              <img
+                src="img/phone.svg"
+                alt="Send"
+                loading="lazy"
+                width="30"
+                height="30" />
             </button>
-            <p class="wm-hint newsletter-status" id="newsletterStatus" role="status" aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -1409,8 +1402,12 @@
       <div>
         <!-- Dodatkowe informacje lub linki -->
         <p>
-          <a class="footer__link" href="https://jigsaw.w3.org/css-validator/check/referer"
-             rel="noopener noreferrer" target="_blank">Sprawdź CSS w walidatorze W3C</a>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer" aria-label="Validate the CSS of this page with the W3C validator">
+            <img
+              style="border: 0; width: 88px; height: 31px"
+              src="https://jigsaw.w3.org/css-validator/images/vcss"
+              alt="Poprawny CSS!" />
+          </a>
         </p>
       </div>
     </footer>
@@ -1443,20 +1440,11 @@
         </div>
       </div>
     </div>
-    <!-- storage.js first: every other module reads WM.storage. -->
-    <script src="js/storage.js" defer></script>
-    <script src="js/darkbrightness.js" defer></script>
     <script src="js/logoAnimation.js" defer></script>
+    <script type="module" src="js/app.js"></script>
     <script src="js/cookie.js" defer></script>
     <script src="js/clock.js" defer></script>
     <script src="js/api.js" defer></script>
     <script src="js/cart.js" defer></script>
-    <script src="js/shop.js" defer></script>
-    <script src="js/forms.js" defer></script>
-    <script type="module" src="js/app.js"></script>
-
-    <!-- Cart feedback: announced to assistive tech, shown visually as a toast. -->
-    <div id="cartLiveRegion" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
-    <div id="cartToast" class="wm-toast" aria-hidden="true"></div>
   </body>
 </html>

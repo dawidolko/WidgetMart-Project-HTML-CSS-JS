@@ -3,79 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#8a5103" />
-
-    <!-- Per-page SEO: unique title and description on every page. -->
-    <title>Galeria kolekcji — WidgetMart</title>
-    <meta name="description" content="Galeria kolekcji WidgetMart w podziale na pory roku oraz kolekcje dziecięce, męskie i damskie." />
-    <link rel="canonical" href="https://projekt2.dawidolko.pl/gallery.html" />
-
-    <!-- SVG first: transparent, so it sits correctly on a dark tab strip.
-         The WebP stays as a fallback for browsers that skip SVG icons. -->
-    <link rel="icon" type="image/svg+xml" href="img/icon.svg" />
-    <link rel="alternate icon" type="image/webp" href="img/icon.webp" />
-
-    <!-- Open Graph / Twitter: controls how the page renders when shared. -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://projekt2.dawidolko.pl/gallery.html" />
-    <meta property="og:title" content="Galeria kolekcji — WidgetMart" />
-    <meta property="og:description" content="Galeria kolekcji WidgetMart w podziale na pory roku oraz kolekcje dziecięce, męskie i damskie." />
-    <meta property="og:image" content="https://projekt2.dawidolko.pl/img/gallery1.webp" />
-    <meta property="og:site_name" content="WidgetMart" />
-    <meta property="og:locale" content="pl_PL" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Galeria kolekcji — WidgetMart" />
-    <meta name="twitter:description" content="Galeria kolekcji WidgetMart w podziale na pory roku oraz kolekcje dziecięce, męskie i damskie." />
-    <meta name="twitter:image" content="https://projekt2.dawidolko.pl/img/gallery1.webp" />
-
-    <!-- Shared design system first, page overrides second. -->
-    <link rel="stylesheet" href="css/base.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Responsive template - DESIGN PROJECT v2" />
+    <title>responsive template - DESIGN PROJECT v2</title>
+    <link rel="icon" href="img/icon.webp" type="image/webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Roboto:ital,wght@0,100;1,100&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="css/styleGallery.css" />
-    <!-- Shop surfaces: overrides the legacy page styles. -->
-    <link rel="stylesheet" href="css/shop.css" />
-    <!-- Breadcrumb trail for search results. -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Strona główna",
-            "item": "https://projekt2.dawidolko.pl/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Galeria",
-            "item": "https://projekt2.dawidolko.pl/gallery.html"
-          }
-        ]
-      }
-    </script>
   </head>
 
   <body>
-    <!-- First focusable element: lets a keyboard user skip the navigation. -->
-    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
-      <nav aria-label="Główna nawigacja">
+      <nav>
         <div id="nav">
-          <label id="hamburger" for="toggle" aria-hidden="true">☰</label>
+          <label id="hamburger" for="toggle">☰</label>
           <!-- Przycisk menu hamburger dla responsywności -->
-          <input
-            type="checkbox"
-            id="toggle"
-            class="nav-toggle"
-            aria-label="Rozwiń menu nawigacyjne" />
+          <input type="checkbox" id="toggle" />
           <ol id="menu">
             <li class="menuItem">
               <a href="./index.html"
                 ><ruby
                   ><img
                     src="img/home-alt.svg"
-                    alt=""
+                    alt="home"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -89,7 +44,7 @@
                 ><ruby
                   ><img
                     src="img/collage.svg"
-                    alt=""
+                    alt="collage"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -102,7 +57,7 @@
                 ><ruby
                   ><img
                     src="img/calendar-next.svg"
-                    alt=""
+                    alt="calendar"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -115,7 +70,7 @@
                     ><ruby
                       ><img
                         src="img/kids.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -128,7 +83,7 @@
                     ><ruby
                       ><img
                         src="img/man.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -141,7 +96,7 @@
                     ><ruby
                       ><img
                         src="img/woman.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -156,7 +111,7 @@
                 ><ruby
                   ><img
                     src="img/phone.svg"
-                    alt=""
+                    alt="phone"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -169,7 +124,7 @@
                 ><ruby
                   ><img
                     src="img/color-bucket.svg"
-                    alt=""
+                    alt="color-bucket"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -182,7 +137,7 @@
                     ><ruby
                       ><img
                         src="img/kids.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -195,7 +150,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -208,7 +163,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -221,7 +176,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -234,7 +189,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -249,7 +204,7 @@
                     ><ruby
                       ><img
                         src="img/man.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -262,7 +217,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -275,7 +230,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -288,7 +243,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -301,7 +256,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -316,7 +271,7 @@
                     ><ruby
                       ><img
                         src="img/woman.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -329,7 +284,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -342,7 +297,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -355,7 +310,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -368,7 +323,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -385,7 +340,7 @@
                 ><ruby
                   ><img
                     src="img/comment.svg"
-                    alt=""
+                    alt="comment"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -408,17 +363,7 @@
         </div>
       </nav>
     </header>
-    <main id="main-content" tabindex="-1">
-      <nav class="wm-breadcrumbs" aria-label="Ścieżka nawigacji">
-        <ol>
-          <li><a href="./index.html">Strona główna</a></li>
-          <li><span aria-current="page">Galeria</span></li>
-        </ol>
-      </nav>
-      <div class="wm-page-head">
-        <h1>Galeria kolekcji</h1>
-        <p>Zdjęcia naszych kolekcji w podziale na pory roku oraz kolekcje dziecięce, męskie i damskie.</p>
-      </div>
+    <main>
       <div id="container" class="container">
         <button style="display: none" id="button" class="button">
           Potwierdź godzinę !
@@ -437,12 +382,15 @@
           <div class="przycisk" id="quote-display"></div>
         </div>
       </div>
+
+      <h1 style="display: none">.</h1>
       <h2 class="gallery-heading">Gallery</h2>
       <div class="gallery-container">
         <div class="naglowek">
           <h2>CHILDREN'S COLLECTION</h2>
         </div>
         <section class="gallery_class" id="kid">
+          <h5 style="display: none">.</h5>
           <img
             class="image-box"
             src="img/gallery1.webp"
@@ -480,6 +428,7 @@
           <h2>MEN'S COLLECTION</h2>
         </div>
         <section class="gallery_class" id="men">
+          <h5 style="display: none">.</h5>
           <img
             class="image-box"
             src="img/gallery5.webp"
@@ -517,6 +466,7 @@
           <h2>WOMEN'S COLLECTION</h2>
         </div>
         <section class="gallery_class" id="women">
+          <h5 style="display: none">.</h5>
           <img
             class="image-box"
             src="img/gallery9.webp"
@@ -603,23 +553,18 @@
       <div>
         <!-- Dodatkowe informacje lub linki -->
         <p>
-          <a class="footer__link" href="https://jigsaw.w3.org/css-validator/check/referer"
-             rel="noopener noreferrer" target="_blank">Sprawdź CSS w walidatorze W3C</a>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img
+              style="border: 0; width: 88px; height: 31px"
+              src="https://jigsaw.w3.org/css-validator/images/vcss"
+              alt="Poprawny CSS!" />
+          </a>
         </p>
       </div>
     </footer>
 
-    <!-- storage.js first: every other module reads WM.storage. -->
-    <script src="js/storage.js" defer></script>
-    <script src="js/darkbrightness.js" defer></script>
-    <script src="js/cookie.js" defer></script>
-    <script src="js/cart.js" defer></script>
-    <script src="js/shop.js" defer></script>
-    <script src="js/forms.js" defer></script>
     <script type="module" src="js/app.js"></script>
-
-    <!-- Cart feedback: announced to assistive tech, shown visually as a toast. -->
-    <div id="cartLiveRegion" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
-    <div id="cartToast" class="wm-toast" aria-hidden="true"></div>
+    <script src="js/darkbrightness.js" defer></script>
+    <script src="js/cart.js" defer></script>
   </body>
 </html>

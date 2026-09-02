@@ -3,468 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#8a5103" />
-
-    <!-- Per-page SEO: unique title and description on every page. -->
-    <title>Produkty — WidgetMart</title>
-    <meta name="description" content="Pełna oferta WidgetMart: 18 produktów w kategoriach męskiej, damskiej i dziecięcej. Wyszukuj, filtruj i sortuj po cenie." />
-    <link rel="canonical" href="https://projekt2.dawidolko.pl/product.html" />
-
-    <!-- SVG first: transparent, so it sits correctly on a dark tab strip.
-         The WebP stays as a fallback for browsers that skip SVG icons. -->
-    <link rel="icon" type="image/svg+xml" href="img/icon.svg" />
-    <link rel="alternate icon" type="image/webp" href="img/icon.webp" />
-
-    <!-- Open Graph / Twitter: controls how the page renders when shared. -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://projekt2.dawidolko.pl/product.html" />
-    <meta property="og:title" content="Produkty — WidgetMart" />
-    <meta property="og:description" content="Pełna oferta WidgetMart: 18 produktów w kategoriach męskiej, damskiej i dziecięcej. Wyszukuj, filtruj i sortuj po cenie." />
-    <meta property="og:image" content="https://projekt2.dawidolko.pl/img/product1.webp" />
-    <meta property="og:site_name" content="WidgetMart" />
-    <meta property="og:locale" content="pl_PL" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Produkty — WidgetMart" />
-    <meta name="twitter:description" content="Pełna oferta WidgetMart: 18 produktów w kategoriach męskiej, damskiej i dziecięcej. Wyszukuj, filtruj i sortuj po cenie." />
-    <meta name="twitter:image" content="https://projekt2.dawidolko.pl/img/product1.webp" />
-
-    <!-- Shared design system first, page overrides second. -->
-    <link rel="stylesheet" href="css/base.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Responsive template - DESIGN PROJECT v2" />
+    <title>responsive template - DESIGN PROJECT v2</title>
+    <link rel="icon" href="img/icon.webp" type="image/webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Roboto:ital,wght@0,100;1,100&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="css/styleProduct.css" />
-    <!-- Shop surfaces: overrides the legacy page styles. -->
-    <link rel="stylesheet" href="css/shop.css" />
-    <!-- Breadcrumb trail for search results. -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Strona główna",
-            "item": "https://projekt2.dawidolko.pl/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Produkty",
-            "item": "https://projekt2.dawidolko.pl/product.html"
-          }
-        ]
-      }
-    </script>
-    <!-- Product catalogue: price and availability for rich results. -->
-    <script type="application/ld+json">
-{
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Produkty WidgetMart",
-        "numberOfItems": 18,
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@type": "Product",
-              "name": "Men product 1",
-              "image": "https://projekt2.dawidolko.pl/img/product1.webp",
-              "category": "Mężczyźni",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "99.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@type": "Product",
-              "name": "Men product 2",
-              "image": "https://projekt2.dawidolko.pl/img/product2.webp",
-              "category": "Mężczyźni",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "99.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@type": "Product",
-              "name": "Men product 3",
-              "image": "https://projekt2.dawidolko.pl/img/product3.webp",
-              "category": "Mężczyźni",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "99.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "item": {
-              "@type": "Product",
-              "name": "Men product 4",
-              "image": "https://projekt2.dawidolko.pl/img/product4.webp",
-              "category": "Mężczyźni",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "99.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 5,
-            "item": {
-              "@type": "Product",
-              "name": "Men product 5",
-              "image": "https://projekt2.dawidolko.pl/img/product5.webp",
-              "category": "Mężczyźni",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "99.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 6,
-            "item": {
-              "@type": "Product",
-              "name": "Men product 6",
-              "image": "https://projekt2.dawidolko.pl/img/product6.webp",
-              "category": "Mężczyźni",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "99.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 7,
-            "item": {
-              "@type": "Product",
-              "name": "Women product 1",
-              "image": "https://projekt2.dawidolko.pl/img/product7.webp",
-              "category": "Kobiety",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "99.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 8,
-            "item": {
-              "@type": "Product",
-              "name": "Women product 2",
-              "image": "https://projekt2.dawidolko.pl/img/product8.webp",
-              "category": "Kobiety",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "99.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 9,
-            "item": {
-              "@type": "Product",
-              "name": "Women product 3",
-              "image": "https://projekt2.dawidolko.pl/img/product9.webp",
-              "category": "Kobiety",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "99.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 10,
-            "item": {
-              "@type": "Product",
-              "name": "Women product 4",
-              "image": "https://projekt2.dawidolko.pl/img/product10.webp",
-              "category": "Kobiety",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "99.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 11,
-            "item": {
-              "@type": "Product",
-              "name": "Women product 5",
-              "image": "https://projekt2.dawidolko.pl/img/product11.webp",
-              "category": "Kobiety",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "99.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 12,
-            "item": {
-              "@type": "Product",
-              "name": "Women product 6",
-              "image": "https://projekt2.dawidolko.pl/img/product12.webp",
-              "category": "Kobiety",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "99.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 13,
-            "item": {
-              "@type": "Product",
-              "name": "Kids product 1",
-              "image": "https://projekt2.dawidolko.pl/img/product14.webp",
-              "category": "Dzieci",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "30.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 14,
-            "item": {
-              "@type": "Product",
-              "name": "Kids product 2",
-              "image": "https://projekt2.dawidolko.pl/img/product14.webp",
-              "category": "Dzieci",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "30.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 15,
-            "item": {
-              "@type": "Product",
-              "name": "Kids product 3",
-              "image": "https://projekt2.dawidolko.pl/img/product15.webp",
-              "category": "Dzieci",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "30.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 16,
-            "item": {
-              "@type": "Product",
-              "name": "Kids product 4",
-              "image": "https://projekt2.dawidolko.pl/img/product16.webp",
-              "category": "Dzieci",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "30.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 17,
-            "item": {
-              "@type": "Product",
-              "name": "Kids product 5",
-              "image": "https://projekt2.dawidolko.pl/img/product8.webp",
-              "category": "Dzieci",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "30.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 18,
-            "item": {
-              "@type": "Product",
-              "name": "Kids product 6",
-              "image": "https://projekt2.dawidolko.pl/img/product18.webp",
-              "category": "Dzieci",
-              "brand": {
-                "@type": "Brand",
-                "name": "WidgetMart"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "30.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://projekt2.dawidolko.pl/product.html"
-              }
-            }
-          }
-        ]
-      }
-    </script>
   </head>
 
   <body>
-    <!-- First focusable element: lets a keyboard user skip the navigation. -->
-    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
-      <nav aria-label="Główna nawigacja">
+      <nav>
         <div id="nav">
-          <label id="hamburger" for="toggle" aria-hidden="true">☰</label>
+          <label id="hamburger" for="toggle">☰</label>
           <!-- Przycisk menu hamburger dla responsywności -->
-          <input
-            type="checkbox"
-            id="toggle"
-            class="nav-toggle"
-            aria-label="Rozwiń menu nawigacyjne" />
+          <input type="checkbox" id="toggle" />
           <ol id="menu">
             <li class="menuItem">
               <a href="./index.html"
                 ><ruby
                   ><img
                     src="img/home-alt.svg"
-                    alt=""
+                    alt="home"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -478,7 +44,7 @@
                 ><ruby
                   ><img
                     src="img/collage.svg"
-                    alt=""
+                    alt="collage"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -491,7 +57,7 @@
                 ><ruby
                   ><img
                     src="img/calendar-next.svg"
-                    alt=""
+                    alt="calendar"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -504,7 +70,7 @@
                     ><ruby
                       ><img
                         src="img/kids.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -517,7 +83,7 @@
                     ><ruby
                       ><img
                         src="img/man.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -530,7 +96,7 @@
                     ><ruby
                       ><img
                         src="img/woman.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -545,7 +111,7 @@
                 ><ruby
                   ><img
                     src="img/phone.svg"
-                    alt=""
+                    alt="phone"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -558,7 +124,7 @@
                 ><ruby
                   ><img
                     src="img/color-bucket.svg"
-                    alt=""
+                    alt="color-bucket"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -571,7 +137,7 @@
                     ><ruby
                       ><img
                         src="img/kids.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -584,7 +150,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -597,7 +163,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -610,7 +176,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -623,7 +189,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -638,7 +204,7 @@
                     ><ruby
                       ><img
                         src="img/man.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -651,7 +217,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -664,7 +230,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -677,7 +243,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -690,7 +256,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -705,7 +271,7 @@
                     ><ruby
                       ><img
                         src="img/woman.webp"
-                        alt=""
+                        alt="calendar"
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -718,7 +284,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -731,7 +297,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -744,7 +310,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -757,7 +323,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt=""
+                            alt="calendar"
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -774,7 +340,7 @@
                 ><ruby
                   ><img
                     src="img/comment.svg"
-                    alt=""
+                    alt="comment"
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -797,17 +363,7 @@
         </div>
       </nav>
     </header>
-    <main id="main-content" tabindex="-1">
-      <nav class="wm-breadcrumbs" aria-label="Ścieżka nawigacji">
-        <ol>
-          <li><a href="./index.html">Strona główna</a></li>
-          <li><span aria-current="page">Produkty</span></li>
-        </ol>
-      </nav>
-      <div class="wm-page-head">
-        <h1>Produkty</h1>
-        <p>Przeglądaj pełną ofertę WidgetMart. Skorzystaj z wyszukiwarki, filtruj według kategorii i sortuj po cenie.</p>
-      </div>
+    <main>
       <div id="container" class="container">
         <button style="display: none" id="button" class="button">
           Potwierdź godzinę !
@@ -827,176 +383,126 @@
         </div>
       </div>
 
-      <!-- Search / filter / sort. Plain form controls with real labels; the
-           behaviour lives in js/shop.js and degrades to "all products shown"
-           if JavaScript is unavailable. -->
-      <section class="wm-toolbar" aria-labelledby="filters-heading">
-        <h2 id="filters-heading" class="visually-hidden">Filtrowanie produktów</h2>
-        <div class="wm-toolbar__row">
-          <div class="wm-field">
-            <label for="productSearch">Szukaj produktu</label>
-            <input
-              type="search"
-              id="productSearch"
-              class="wm-input"
-              placeholder="np. Men product 1"
-              autocomplete="off" />
-          </div>
-          <div class="wm-field">
-            <label for="productSort">Sortuj</label>
-            <select id="productSort" class="wm-select">
-              <option value="default">Domyślnie</option>
-              <option value="price-asc">Cena: od najniższej</option>
-              <option value="price-desc">Cena: od najwyższej</option>
-              <option value="name-asc">Nazwa: A-Z</option>
-              <option value="name-desc">Nazwa: Z-A</option>
-            </select>
-          </div>
-          <button type="button" id="productFilterClear" class="wm-btn wm-btn--secondary">
-            Wyczyść filtry
-          </button>
-        </div>
+      <section class="products">
+        <h1 style="display: none">.</h1>
+        <h2 style="display: none">.</h2>
+        <input type="radio" id="all" name="category" checked />
+        <label for="all">All</label>
 
-        <fieldset class="wm-chips" style="margin-top: 1rem">
-          <legend class="wm-label">Kategoria</legend>
-          <button type="button" class="wm-chip" data-category-filter="all" aria-pressed="true">Wszystkie</button>
-          <button type="button" class="wm-chip" data-category-filter="men" aria-pressed="false">Mężczyźni</button>
-          <button type="button" class="wm-chip" data-category-filter="women" aria-pressed="false">Kobiety</button>
-          <button type="button" class="wm-chip" data-category-filter="kids" aria-pressed="false">Dzieci</button>
-        </fieldset>
-      </section>
+        <input type="radio" id="men" name="category" />
+        <label for="men">Men</label>
 
-      <p class="wm-status" id="productResultCount" role="status" aria-live="polite"></p>
+        <input type="radio" id="women" name="category" />
+        <label for="women">Women</label>
 
-      <div class="wm-empty" id="productEmptyState" hidden>
-        <h2>Brak wyników</h2>
-        <p>Żaden produkt nie pasuje do wybranych filtrów. Zmień kryteria lub wyczyść filtry.</p>
-      </div>
+        <input type="radio" id="kids" name="category" />
+        <label for="kids">Kids</label>
 
-      <section class="products" data-shop>
         <!-- Produkty dla Men -->
-        <h2 id="men1" data-section-heading="men">Produkty męskie</h2>
-        <section class="product_men-main" data-product-section="men">
-          <div class="product_men" data-product data-category="men" data-name="Men product 1" data-price="99.00">
+        <div id="men1">PRODUCTS MEN</div>
+        <section class="product_men-main">
+          <div class="product_men">
             <img
               src="img/product1.webp"
-              alt=""
+              alt="Men photo item1"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Men product 1</h3>
-            <p class="product-price">$99.00</p>
+            <p>$10.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Men product 1"
-              data-name="Men product 1"
+              data-name="Men photo item1"
               data-price="99.00"
               data-image="img/product1.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_men" data-product data-category="men" data-name="Men product 2" data-price="99.00">
+          <div class="product_men">
             <img
               src="img/product2.webp"
-              alt=""
+              alt="Men photo item2"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Men product 2</h3>
-            <p class="product-price">$99.00</p>
+            <p>$10.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Men product 2"
-              data-name="Men product 2"
+              data-name="Men photo item2"
               data-price="99.00"
               data-image="img/product2.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_men" data-product data-category="men" data-name="Men product 3" data-price="99.00">
+          <div class="product_men">
             <img
               src="img/product3.webp"
-              alt=""
+              alt="Men photo item3"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Men product 3</h3>
-            <p class="product-price">$99.00</p>
+            <p>$10.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Men product 3"
-              data-name="Men product 3"
+              data-name="Men photo item3"
               data-price="99.00"
               data-image="img/product3.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_men" data-product data-category="men" data-name="Men product 4" data-price="99.00">
+          <div class="product_men">
             <img
               src="img/product4.webp"
-              alt=""
+              alt="Men photo item4"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Men product 4</h3>
-            <p class="product-price">$99.00</p>
+            <p>$10.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Men product 4"
-              data-name="Men product 4"
+              data-name="Men photo item4"
               data-price="99.00"
               data-image="img/product4.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_men" data-product data-category="men" data-name="Men product 5" data-price="99.00">
+          <div class="product_men">
             <img
               src="img/product5.webp"
-              alt=""
+              alt="Men photo item5"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Men product 5</h3>
-            <p class="product-price">$99.00</p>
+            <p>$10.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Men product 5"
-              data-name="Men product 5"
+              data-name="Men photo item5"
               data-price="99.00"
               data-image="img/product5.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_men" data-product data-category="men" data-name="Men product 6" data-price="99.00">
+          <div class="product_men">
             <img
               src="img/product6.webp"
-              alt=""
+              alt="Men photo item6"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Men product 6</h3>
-            <p class="product-price">$99.00</p>
+            <p>$10.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Men product 6"
-              data-name="Men product 6"
+              data-name="Men photo item6"
               data-price="99.00"
               data-image="img/product6.webp">
               ADD CARD
@@ -1005,128 +511,110 @@
         </section>
 
         <!-- Produkty dla Women -->
-        <h2 id="women1" data-section-heading="women">Produkty damskie</h2>
-        <section class="product_women-main" data-product-section="women">
-          <div class="product_women" data-product data-category="women" data-name="Women product 1" data-price="99.00">
+        <div id="women1">PRODUCTS WOMEN</div>
+        <section class="product_women-main">
+          <div class="product_women">
             <img
               src="img/product7.webp"
-              alt=""
+              alt="Women photo item1"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Women product 1</h3>
-            <p class="product-price">$99.00</p>
+            <p>$99.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Women product 1"
-              data-name="Women product 1"
+              data-name="Women photo item1"
               data-price="99.00"
               data-image="img/product7.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_women" data-product data-category="women" data-name="Women product 2" data-price="99.00">
+          <div class="product_women">
             <img
               src="img/product8.webp"
-              alt=""
+              alt="Women photo item2"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Women product 2</h3>
-            <p class="product-price">$99.00</p>
+            <p>$99.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Women product 2"
-              data-name="Women product 2"
+              data-name="Women photo item2"
               data-price="99.00"
               data-image="img/product8.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_women" data-product data-category="women" data-name="Women product 3" data-price="99.00">
+          <div class="product_women">
             <img
               src="img/product9.webp"
-              alt=""
+              alt="Women photo item3"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Women product 3</h3>
-            <p class="product-price">$99.00</p>
+            <p>$99.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Women product 3"
-              data-name="Women product 3"
+              data-name="Women photo item3"
               data-price="99.00"
               data-image="img/product9.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_women" data-product data-category="women" data-name="Women product 4" data-price="99.00">
+          <div class="product_women">
             <img
               src="img/product10.webp"
-              alt=""
+              alt="Women photo item4"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Women product 4</h3>
-            <p class="product-price">$99.00</p>
+            <p>$99.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Women product 4"
-              data-name="Women product 4"
+              data-name="Women photo item4"
               data-price="99.00"
               data-image="img/product10.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_women" data-product data-category="women" data-name="Women product 5" data-price="99.00">
+          <div class="product_women">
             <img
               src="img/product11.webp"
-              alt=""
+              alt="Women photo item5"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Women product 5</h3>
-            <p class="product-price">$99.00</p>
+            <p>$99.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Women product 5"
-              data-name="Women product 5"
+              data-name="Women photo item5"
               data-price="99.00"
               data-image="img/product11.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_women" data-product data-category="women" data-name="Women product 6" data-price="99.00">
+          <div class="product_women">
             <img
               src="img/product12.webp"
-              alt=""
+              alt="Women photo item6"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Women product 6</h3>
-            <p class="product-price">$99.00</p>
+            <p>$99.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Women product 6"
-              data-name="Women product 6"
+              data-name="Women photo item6"
               data-price="99.00"
               data-image="img/product12.webp">
               ADD CARD
@@ -1135,128 +623,110 @@
         </section>
 
         <!-- Produkty dla Kids -->
-        <h2 id="kid1" data-section-heading="kids">Produkty dziecięce</h2>
-        <section class="product_kids-main" data-product-section="kids">
-          <div class="product_kids" data-product data-category="kids" data-name="Kids product 1" data-price="30.00">
+        <div id="kid1">PRODUCTS KID</div>
+        <section class="product_kids-main">
+          <div class="product_kids">
             <img
               src="img/product4.webp"
-              alt=""
+              alt="Kids photo item1"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Kids product 1</h3>
-            <p class="product-price">$30.00</p>
+            <p>$30.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Kids product 1"
-              data-name="Kids product 1"
+              data-name="Kids photo item1"
               data-price="30.00"
               data-image="img/product14.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_kids" data-product data-category="kids" data-name="Kids product 2" data-price="30.00">
+          <div class="product_kids">
             <img
               src="img/product14.webp"
-              alt=""
+              alt="Kids photo item2"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Kids product 2</h3>
-            <p class="product-price">$30.00</p>
+            <p>$30.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Kids product 2"
-              data-name="Kids product 2"
+              data-name="Kids photo item2"
               data-price="30.00"
               data-image="img/product14.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_kids" data-product data-category="kids" data-name="Kids product 3" data-price="30.00">
+          <div class="product_kids">
             <img
               src="img/product15.webp"
-              alt=""
+              alt="Kids photo item3"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Kids product 3</h3>
-            <p class="product-price">$30.00</p>
+            <p>$30.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Kids product 3"
-              data-name="Kids product 3"
+              data-name="Kids photo item3"
               data-price="30.00"
               data-image="img/product15.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_kids" data-product data-category="kids" data-name="Kids product 4" data-price="30.00">
+          <div class="product_kids">
             <img
               src="img/product16.webp"
-              alt=""
+              alt="Kids photo item4"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Kids product 4</h3>
-            <p class="product-price">$30.00</p>
+            <p>$30.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Kids product 4"
-              data-name="Kids product 4"
+              data-name="Kids photo item4"
               data-price="30.00"
               data-image="img/product16.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_kids" data-product data-category="kids" data-name="Kids product 5" data-price="30.00">
+          <div class="product_kids">
             <img
               src="img/product8.webp"
-              alt=""
+              alt="Kids photo item5"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Kids product 5</h3>
-            <p class="product-price">$30.00</p>
+            <p>$30.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Kids product 5"
-              data-name="Kids product 5"
+              data-name="Kids photo item5"
               data-price="30.00"
               data-image="img/product8.webp">
               ADD CARD
             </button>
           </div>
 
-          <div class="product_kids" data-product data-category="kids" data-name="Kids product 6" data-price="30.00">
+          <div class="product_kids">
             <img
               src="img/product18.webp"
-              alt=""
+              alt="Kids photo item6"
               loading="lazy"
               width="250"
               height="250" />
             <h3>Kids product 6</h3>
-            <p class="product-price">$30.00</p>
+            <p>$30.00</p>
             <button
-              type="button"
               onclick="addToCart(this)"
-              data-add-to-cart
-              aria-label="Dodaj do koszyka: Kids product 6"
-              data-name="Kids product 6"
+              data-name="Kids photo item6"
               data-price="30.00"
               data-image="img/product18.webp">
               ADD CARD
@@ -1317,22 +787,19 @@
       <div>
         <!-- Dodatkowe informacje lub linki -->
         <p>
-          <a class="footer__link" href="https://jigsaw.w3.org/css-validator/check/referer"
-             rel="noopener noreferrer" target="_blank">Sprawdź CSS w walidatorze W3C</a>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img
+              style="border: 0; width: 88px; height: 31px"
+              src="https://jigsaw.w3.org/css-validator/images/vcss"
+              alt="Poprawny CSS!" />
+          </a>
         </p>
       </div>
     </footer>
-    <!-- storage.js first: every other module reads WM.storage. -->
-    <script src="js/storage.js" defer></script>
-    <script src="js/darkbrightness.js" defer></script>
-    <script src="js/cookie.js" defer></script>
-    <script src="js/cart.js" defer></script>
-    <script src="js/shop.js" defer></script>
-    <script src="js/forms.js" defer></script>
     <script type="module" src="js/app.js"></script>
-
-    <!-- Cart feedback: announced to assistive tech, shown visually as a toast. -->
-    <div id="cartLiveRegion" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
-    <div id="cartToast" class="wm-toast" aria-hidden="true"></div>
+    <script src="js/darkbrightness.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
   </body>
 </html>
