@@ -12,13 +12,8 @@ document
   .addEventListener("click", fetchRandomQuote);
 
 // Funkcja zmieniająca motyw (ciemny/jasny)
-function toggleTheme() {
-  // Motyw przelaczamy na <html>, tak jak robia to pozostale podstrony
-  // (regula `html.dark` w arkuszach). Wczesniej ta funkcja zmieniala tylko
-  // klase na kontenerze czatu, wiec przycisk "change theme" na stronie
-  // glownej nie zmienial niczego poza samym okienkiem czatu.
-  const html = document.documentElement;
-  const isDark = html.classList.toggle("dark");
+function applyTheme(isDark) {
+  document.documentElement.classList.toggle("dark", isDark);
 
   // Okno czatu ma wlasny styl ciemny — trzymamy je w zgodzie ze strona.
   const chatContainer = document.querySelector(".chat-container");
@@ -26,20 +21,50 @@ function toggleTheme() {
     chatContainer.classList.toggle("dark-mode", isDark);
   }
 
-  const button = document.getElementById("toggle-theme");
-  if (button) {
-    button.textContent = isDark ? "bright mode" : "change theme";
-    button.setAttribute("aria-pressed", String(isDark));
+  // Oba przyciski (navbar i czat) pokazuja ten sam stan.
+  const chatButton = document.getElementById("toggle-theme");
+  if (chatButton) {
+    chatButton.textContent = isDark ? "bright mode" : "change theme";
+    chatButton.setAttribute("aria-pressed", String(isDark));
   }
 
-  // Wybor przezywa przejscie na inna podstrone i powrot.
+  const navButton = document.querySelector(".toggle");
+  if (navButton) {
+    navButton.textContent = isDark ? "Bright mode" : "Dark mode";
+    navButton.setAttribute("aria-pressed", String(isDark));
+  }
+
   try {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   } catch (e) {
-    // Prywatne okno przegladarki potrafi zablokowac zapis — motyw
-    // zadziala, po prostu nie zostanie zapamietany.
+    // Prywatne okno przegladarki potrafi zablokowac zapis — motyw zadziala,
+    // po prostu nie zostanie zapamietany.
   }
 }
+
+function toggleTheme() {
+  applyTheme(!document.documentElement.classList.contains("dark"));
+}
+
+/*
+ * Przycisk w navbarze przechodzi przez te sama funkcje co przycisk w czacie.
+ *
+ * Wczesniej obslugiwal go osobny listener w `clock.js`, ktory zmienial tylko
+ * klase na <html> — okno czatu zostawalo jasne, a etykiety obu przyciskow
+ * rozjezdzaly sie ze soba. Rejestrujemy sie w fazie przechwytywania i
+ * zatrzymujemy zdarzenie, zeby tamten listener nie odwracal zmiany.
+ */
+document.addEventListener(
+  "click",
+  function (event) {
+    const navButton = event.target.closest(".toggle");
+    if (!navButton) return;
+    event.stopImmediatePropagation();
+    event.preventDefault();
+    toggleTheme();
+  },
+  true
+);
 
 // Przywrocenie zapamietanego motywu przy wejsciu na strone.
 (function restoreTheme() {
@@ -51,12 +76,7 @@ function toggleTheme() {
   }
 
   if (saved === "dark") {
-    document.documentElement.classList.add("dark");
-    const button = document.getElementById("toggle-theme");
-    if (button) {
-      button.textContent = "bright mode";
-      button.setAttribute("aria-pressed", "true");
-    }
+    applyTheme(true);
   }
 })();
 
