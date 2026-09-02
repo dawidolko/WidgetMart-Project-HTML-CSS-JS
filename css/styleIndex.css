@@ -1885,14 +1885,17 @@ footer img:hover {
   display: block;
 }
 
+.chat-container.dark-mode .chat-header,
 .dark-mode .chat-header {
   background: #343a40;
 }
 
+.chat-container.dark-mode,
 .dark-mode .chat-container {
   background: #495057;
 }
 
+.chat-container.dark-mode button,
 .dark-mode button {
   background-color: #5a6268;
 }
