@@ -1,0 +1,18 @@
+# WidgetMart
+
+> WidgetMart is a demo shop with working widgets: a clock with booking, weather lookup, a chat box with quotes and a dark theme switch.
+
+## Pages
+
+- [WidgetMart](https://projekt2.dawidolko.pl/): WidgetMart is a demo shop with working widgets: a clock with booking, weather lookup, a chat box with quotes and a dark theme switch.
+- [Products](https://projekt2.dawidolko.pl/product.html): Browse the WidgetMart demo catalogue of kids, men and women products with prices and a cart that keeps its items in the browser.
+- [Photo Gallery](https://projekt2.dawidolko.pl/gallery.html): Photo gallery of the WidgetMart demo shop, with children, men and women collections shown in a responsive image grid.
+- [Services](https://projekt2.dawidolko.pl/services.html): The services page of WidgetMart lists demo offer cards with short descriptions and links through to the product catalogue.
+- [About Us](https://projekt2.dawidolko.pl/aboutUs.html): Read about the WidgetMart demo project, a responsive multi-page shop written as a university HTML, CSS and JavaScript assignment.
+- [Frequently Asked Questions](https://projekt2.dawidolko.pl/faq.html): Frequently asked questions about orders, delivery addresses, warranty, free shipping and tracking on the WidgetMart demo shop.
+- [Contact Us](https://projekt2.dawidolko.pl/contact.html): The contact page of WidgetMart has a validated form for name, email, date, phone and message, with a browser-side confirmation.
+- [Privacy Policy](https://projekt2.dawidolko.pl/privacy.html): Privacy policy page of the WidgetMart demo shop, a static sample document that shows the layout of a legal page.
+
+## Source
+
+- [GitHub repository](https://github.com/dawidolko/WidgetMart-Project-HTML-CSS-JS): Source code and setup notes for the project.

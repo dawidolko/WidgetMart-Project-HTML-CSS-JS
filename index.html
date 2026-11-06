@@ -1,51 +1,35 @@
 <!doctype html>
-<html lang="pl-PL">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta
-      name="description"
-      content="Responsive template - DESIGN PROJECT v2" />
-    <title>responsive template - DESIGN PROJECT v2</title>
-    <!-- SVG first: transparent, so it sits correctly on a dark tab strip.
-         The WebP stays as a fallback for browsers that skip SVG icons. -->
-    <link rel="icon" type="image/svg+xml" href="img/icon.svg" />
-    <link rel="alternate icon" type="image/webp" href="img/icon.webp" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="css/styleIndex.css" as="style" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Roboto:ital,wght@0,100;1,100&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="css/styleIndex.css" />
-  
-    <!-- Canonical URL: the authoritative address for this page. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src &#x27;self&#x27;; img-src &#x27;self&#x27; data: https://openweathermap.org; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; script-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; font-src &#x27;self&#x27;; connect-src &#x27;self&#x27; https://api.openweathermap.org https://dummyjson.com; object-src &#x27;none&#x27;; base-uri &#x27;self&#x27;; form-action &#x27;self&#x27;" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>WidgetMart | Interactive Widget Shop Demo in JavaScript</title>
+    <meta name="description" content="WidgetMart is a demo shop with working widgets: a clock with booking, weather lookup, a chat box with quotes and a dark theme switch." />
     <link rel="canonical" href="https://projekt2.dawidolko.pl/" />
-
-    <!-- Open Graph / Twitter: controls how the page renders when shared. -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://projekt2.dawidolko.pl/" />
-    <meta property="og:title" content="WidgetMart" />
-    <meta property="og:description" content="Interactive widget marketplace built with HTML, CSS and JavaScript." />
     <meta property="og:site_name" content="WidgetMart" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="WidgetMart | Interactive Widget Shop Demo in JavaScript" />
+    <meta property="og:description" content="WidgetMart is a demo shop with working widgets: a clock with booking, weather lookup, a chat box with quotes and a dark theme switch." />
+    <meta property="og:url" content="https://projekt2.dawidolko.pl/" />
+    <meta property="og:image" content="https://projekt2.dawidolko.pl/img/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="WidgetMart preview" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="WidgetMart" />
-    <meta name="twitter:description" content="Interactive widget marketplace built with HTML, CSS and JavaScript." />
-
-    <!-- Structured data: lets search engines describe the site in results. -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "WidgetMart",
-        "url": "https://projekt2.dawidolko.pl",
-        "description": "Interactive widget marketplace built with HTML, CSS and JavaScript.",
-        "author": { "@type": "Person", "name": "Dawid Olko", "url": "https://dawidolko.pl" }
-      }
-    </script>
+    <meta name="twitter:title" content="WidgetMart | Interactive Widget Shop Demo in JavaScript" />
+    <meta name="twitter:description" content="WidgetMart is a demo shop with working widgets: a clock with booking, weather lookup, a chat box with quotes and a dark theme switch." />
+    <meta name="twitter:image" content="https://projekt2.dawidolko.pl/img/og-image.jpg" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"WidgetMart","url":"https://projekt2.dawidolko.pl/","description":"Demo shop with interactive JavaScript widgets.","inLanguage":"en","author":{"@type":"Person","name":"Dawid Olko","jobTitle":"Fullstack / AI Developer","url":"https://dawidolko.pl/"}}</script>
+<meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/svg+xml" href="img/icon.svg" />
+    <link rel="alternate icon" type="image/webp" href="img/icon.webp" />
+    <link rel="preload" href="css/styleIndex.css" as="style" />
+    <link rel="stylesheet" href="css/styleIndex.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/a11y.css" />
     <script src="/a11y/a11y-panel.js" data-accent="#1d4ed8" defer></script>
   </head>
 
@@ -57,14 +41,14 @@
         <div id="nav">
           <label id="hamburger" for="toggle">☰</label>
           <!-- Przycisk menu hamburger dla responsywności -->
-          <input type="checkbox" id="toggle" />
+          <input type="checkbox" id="toggle" aria-label="Toggle navigation menu" />
           <ol id="menu">
             <li class="menuItem">
               <a href="./index.html"
                 ><ruby
                   ><img
                     src="img/home-alt.svg"
-                    alt="home"
+                    alt=""
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -78,7 +62,7 @@
                 ><ruby
                   ><img
                     src="img/collage.svg"
-                    alt="collage"
+                    alt=""
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -91,7 +75,7 @@
                 ><ruby
                   ><img
                     src="img/calendar-next.svg"
-                    alt="calendar"
+                    alt=""
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -104,7 +88,7 @@
                     ><ruby
                       ><img
                         src="img/kids.webp"
-                        alt="calendar"
+                        alt=""
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -117,7 +101,7 @@
                     ><ruby
                       ><img
                         src="img/man.webp"
-                        alt="calendar"
+                        alt=""
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -130,7 +114,7 @@
                     ><ruby
                       ><img
                         src="img/woman.webp"
-                        alt="calendar"
+                        alt=""
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -145,7 +129,7 @@
                 ><ruby
                   ><img
                     src="img/phone.svg"
-                    alt="phone"
+                    alt=""
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -158,7 +142,7 @@
                 ><ruby
                   ><img
                     src="img/color-bucket.svg"
-                    alt="color-bucket"
+                    alt=""
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -171,7 +155,7 @@
                     ><ruby
                       ><img
                         src="img/kids.webp"
-                        alt="calendar"
+                        alt=""
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -184,7 +168,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -197,7 +181,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -210,7 +194,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -223,7 +207,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -238,7 +222,7 @@
                     ><ruby
                       ><img
                         src="img/man.webp"
-                        alt="calendar"
+                        alt=""
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -251,7 +235,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -264,7 +248,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -277,7 +261,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -290,7 +274,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -305,7 +289,7 @@
                     ><ruby
                       ><img
                         src="img/woman.webp"
-                        alt="calendar"
+                        alt=""
                         loading="lazy"
                         width="25"
                         height="25" />
@@ -318,7 +302,7 @@
                         ><ruby
                           ><img
                             src="img/sakura.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -331,7 +315,7 @@
                         ><ruby
                           ><img
                             src="img/sun.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -344,7 +328,7 @@
                         ><ruby
                           ><img
                             src="img/leaves.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -357,7 +341,7 @@
                         ><ruby
                           ><img
                             src="img/snowflake.webp"
-                            alt="calendar"
+                            alt=""
                             loading="lazy"
                             width="25"
                             height="25" />
@@ -374,7 +358,7 @@
                 ><ruby
                   ><img
                     src="img/comment.svg"
-                    alt="comment"
+                    alt=""
                     loading="lazy"
                     width="25"
                     height="25" />
@@ -398,7 +382,7 @@
       </nav>
     </header>
     <main id="main-content" tabindex="-1">
-      <h1 class="visually-hidden">WidgetMart — interaktywny sklep z widgetami</h1>
+      <h1 class="visually-hidden">WidgetMart — an interactive widget shop</h1>
       <div class="blur-background"></div>
       <div id="container" class="container">
         <div class="clock-div">
@@ -416,6 +400,7 @@
         <p class="message pb-4">O której godzinie chcesz się ze mną spotkać?</p>
         <div class="inline-flex text-lg border rounded-md shadow-lg p-5">
           <select
+            aria-label="Hour"
             name="x"
             id="select-hour"
             class="px-2 outline-none appearance-none bg-transparent">
@@ -431,6 +416,7 @@
           </select>
           <span class="px-2">:</span>
           <select
+            aria-label="Minutes"
             name="y"
             id="input-minutes"
             class="px-2 outline-none appearance-none bg-transparent">
@@ -452,7 +438,7 @@
           <div class="szukaj">
             <div class="col">
               <!-- Formularz do wyszukiwania miasta -->
-              <h4 class="City"><strong>Search for a City:</strong></h4>
+              <h2 class="City"><strong>Search for a City:</strong></h2>
               <div class="input-group">
                 <input
                   type="text"
@@ -525,7 +511,6 @@
       <section class="photoFirst">
         <!-- Sekcja pierwszego zestawu zdjęć -->
         <!-- Obrazy i tekst w tej sekcji -->
-        <h2 style="display: none">.</h2>
         <img
           id="photos1"
           src="img/mainPage4.webp"
@@ -556,52 +541,9 @@
       >
 
       <div class="photoSecond">
-        <div class="animation">
-          <img
-            class="glasses"
-            src="https://kibbles.klausapp.com/assets/img/loader/glasses-regular.svg"
-            alt="oksy1"
-            width="140"
-            height="140" />
-          <img
-            class="logoCat"
-            src="https://kibbles.klausapp.com/assets/img/loader/main.svg"
-            alt="cot1"
-            width="140"
-            height="140" />
-        </div>
-        <div class="animation">
-          <img
-            class="glasses"
-            src="https://kibbles.klausapp.com/assets/img/loader/glasses-deal-with-it.svg"
-            alt="oksy2"
-            width="140"
-            height="140" />
-          <img
-            class="logoCat"
-            src="https://kibbles.klausapp.com/assets/img/loader/main.svg"
-            alt="cot2"
-            width="140"
-            height="140" />
-        </div>
-        <div class="animation">
-          <img
-            class="glasses"
-            src="https://kibbles.klausapp.com/assets/img/loader/glasses-hearts.svg"
-            alt="oksy3"
-            width="140"
-            height="140" />
-          <img
-            class="logoCat"
-            src="https://kibbles.klausapp.com/assets/img/loader/main.svg"
-            alt="cot3"
-            width="140"
-            height="140" />
-        </div>
       </div>
 
       <section class="photoSecond">
-        <h2 style="display: none">.</h2>
         <img
           class="photosX"
           src="img/mainPage1.webp"
@@ -633,6 +575,7 @@
         <canvas id="logoCanvas"></canvas>
       </div>
 
+      <h2 class="visually-hidden">Featured products</h2>
       <div class="product-grid">
         <div class="product-item" style="background-color: #eae9e7">
           <div class="product-image">
@@ -1258,7 +1201,6 @@
         </div>
       </section>
       <section class="offer">
-        <h2 style="display: none">.</h2>
         <div class="offer__body">
           <img
             src="img/logo1transparent.webp"
@@ -1340,7 +1282,7 @@
               autocomplete="email"
               placeholder="Enter your email address"
               required />
-            <button type="submit" class="newsletter-submit-btn" aria-label="Zapisz się do newslettera">
+            <button type="submit" class="newsletter-submit-btn" aria-label="Subscribe to the newsletter">
               <img
                 src="img/phone.svg"
                 alt="Send"
@@ -1403,17 +1345,12 @@
       <div>
         <!-- Dodatkowe informacje lub linki -->
         <p>
-          <a href="https://jigsaw.w3.org/css-validator/check/referer" aria-label="Validate the CSS of this page with the W3C validator">
-            <img
-              style="border: 0; width: 88px; height: 31px"
-              src="https://jigsaw.w3.org/css-validator/images/vcss"
-              alt="Poprawny CSS!" />
-          </a>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener noreferrer">Valid CSS</a>
         </p>
       </div>
     </footer>
 
-    <div class="chat-container">
+    <aside class="chat-container" aria-label="Chat">
       <div class="chat-header">
         <span>DRAW A QUOTE!</span>
         <button class="przycisk" id="toggle-theme">change theme</button>
@@ -1424,9 +1361,9 @@
         <button class="przycisk" id="get-quote">Download quote</button>
         <div class="przycisk" id="quote-display"></div>
       </div>
-    </div>
+    </aside>
 
-    <div class="cookie">
+    <aside class="cookie" aria-label="Cookie notice">
       <div class="cookie__box">
         <p class="cookie__title">
           <span class="cookie__img">🍪</span> We use cookie filles
@@ -1440,7 +1377,7 @@
           <button class="cookie__btn">Accept</button>
         </div>
       </div>
-    </div>
+    </aside>
     <script src="js/logoAnimation.js" defer></script>
     <script type="module" src="js/app.js"></script>
     <script src="js/cookie.js" defer></script>
