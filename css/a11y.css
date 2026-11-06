@@ -171,3 +171,39 @@ main img {
   position: relative;
   z-index: 2;
 }
+
+/*
+ * The submenu sat below a gap and swung in for a second, so the pointer left the
+ * menu on its way down. It now touches its parent, stays open briefly after the
+ * pointer leaves, and also opens from the keyboard.
+ */
+@media (min-width: 1000px) {
+  html #menu > li > ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    animation: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.15s ease, visibility 0s linear 0.25s;
+  }
+
+  html #menu > li:hover > ul,
+  html #menu > li:focus-within > ul {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.15s ease, visibility 0s;
+  }
+
+  html #menu > li > ul[style*="display: none"] {
+    display: none !important;
+  }
+
+  html #menu > li > ul > li > a {
+    margin-top: 0;
+    padding: 6px 0;
+  }
+}
