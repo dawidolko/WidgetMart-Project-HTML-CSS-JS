@@ -46,6 +46,14 @@ Everything that would normally need a server is done in the browser, which is ex
 
 ---
 
+## 🎬 Demo
+
+<p align="center">
+  <img src="docs/readme/demo.webp" alt="WidgetMart: a short scroll through the live site" width="80%">
+</p>
+
+---
+
 ## 🛠️ Technology Stack
 
 | Technology         | Role                                                        |
