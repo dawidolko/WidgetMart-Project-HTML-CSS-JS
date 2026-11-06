@@ -1,6 +1,7 @@
-// Deklaruj zmienną do przechowywania wyszukanego miasta
+/*
+ * Stores the searched city
+ */
 var city = "";
-// Deklaracje zmiennych
 var searchCity = document.getElementById("search-city");
 var searchButton = document.getElementById("search-button");
 var clearButton = document.getElementById("clear-history");
@@ -11,7 +12,9 @@ var currentWSpeed = document.getElementById("wind-speed");
 var currentUvindex = document.getElementById("uv-index");
 var sCity = [];
 
-// Funkcja sprawdza, czy miasto istnieje w historii
+/*
+ * Checks whether the city is in the history
+ */
 function find(c) {
   for (var i = 0; i < sCity.length; i++) {
     if (c.toUpperCase() === sCity[i]) {
@@ -21,10 +24,11 @@ function find(c) {
   return 1;
 }
 
-// Ustawienie klucza API
 var APIKey = "a0aca8a89948154a4182dcecc780b513";
 
-// Wyświetlenie aktualnej i przyszłej pogody po wprowadzeniu miasta
+/*
+ * Shows the current and future weather after a city is entered
+ */
 function displayWeather(event) {
   event.preventDefault();
   if (searchCity.value.trim() !== "") {
@@ -33,30 +37,27 @@ function displayWeather(event) {
   }
 }
 
-// Funkcja do wywołania API pogodowego
+/*
+ * Calls the weather API
+ */
 function currentWeather(city) {
-  // Budowanie URL-a do pobrania danych z serwera
   var queryURL =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     city +
     "&APPID=" +
     APIKey;
 
-  // Wywołanie API za pomocą XMLHttpRequest
   var xhr = new XMLHttpRequest();
   xhr.open("GET", queryURL, true);
   xhr.onload = function () {
     if (xhr.status === 200) {
       var response = JSON.parse(xhr.responseText);
 
-      // Pobranie ikony pogody
       var weatherIcon = response.weather[0].icon;
       var iconURL = "https://openweathermap.org/img/wn/" + weatherIcon + "@2x.png";
 
-      // Pobranie daty
       var date = new Date(response.dt * 1000).toLocaleDateString();
 
-      // Wyświetlenie danych
       currentCity.innerHTML = response.name + " (" + date + ") " + "<img src=" + iconURL + ">";
       var tempF = (response.main.temp - 273.15);
       currentTemperature.innerHTML = tempF.toFixed(2) + "&#8451";
@@ -67,7 +68,9 @@ function currentWeather(city) {
       UVIndex(response.coord.lon, response.coord.lat);
       forecast(response.id);
 
-      // Zapis miasta do historii
+      /*
+       * Save the city to the history
+       */
       sCity = JSON.parse(localStorage.getItem("cityname")) || [];
       if (find(city) > 0) {
         sCity.push(city.toUpperCase());
@@ -75,26 +78,33 @@ function currentWeather(city) {
         addToList(city);
       }
     } else if (xhr.status === 404) {
-      // Obsługa błędu, gdy miasto nie zostało znalezione
+      /*
+       * City not found
+       */
       alert("Błąd: Nie znaleziono miasta. Spróbuj ponownie.");
     } else {
-      // Obsługa innych błędów
+      /*
+       * Other errors
+       */
       console.log("Błąd: " + xhr.status);
       alert("Wystąpił błąd podczas wyszukiwania miasta. Sprawdź połączenie internetowe lub spróbuj ponownie później.");
     }
   };
   xhr.onerror = function () {
-    // Obsługa błędu sieciowego
+    /*
+     * Network error
+     */
     alert("Błąd sieci: Nie można nawiązać połączenia z serwerem.");
   };
   xhr.send();
 }
 
-// Funkcja do pobrania UV Index
+/*
+ * Fetches the UV index
+ */
 function UVIndex(ln, lt) {
   var uvqURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + lt + "&lon=" + ln;
 
-  // Wywołanie API za pomocą XMLHttpRequest
   var xhr = new XMLHttpRequest();
   xhr.open("GET", uvqURL, true);
   xhr.onload = function () {
@@ -108,12 +118,13 @@ function UVIndex(ln, lt) {
   xhr.send();
 }
 
-// Funkcja do wyświetlenia prognozy na 5 dni
+/*
+ * Shows the 5-day forecast
+ */
 function forecast(cityid) {
   var dayover = false;
   var queryForcastURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityid + "&appid=" + APIKey;
 
-  // Wywołanie API za pomocą XMLHttpRequest
   var xhr = new XMLHttpRequest();
   xhr.open("GET", queryForcastURL, true);
   xhr.onload = function () {
@@ -140,7 +151,6 @@ function forecast(cityid) {
   xhr.send();
 }
 
-// Dodaj miasto do historii
 function addToList(c) {
   var listEl = document.createElement("li");
   listEl.textContent = c.toUpperCase();
@@ -149,7 +159,9 @@ function addToList(c) {
   document.querySelector(".list-group").appendChild(listEl);
 }
 
-// Wywołaj wcześniejsze wyszukiwanie po kliknięciu na element historii
+/*
+ * Re-runs an earlier search when a history item is clicked
+ */
 function invokePastSearch(event) {
   var liEl = event.target;
   if (liEl.matches("li")) {
@@ -158,7 +170,9 @@ function invokePastSearch(event) {
   }
 }
 
-// Załaduj ostatnie miasto z historii
+/*
+ * Loads the last city from the history
+ */
 function loadLastCity() {
   document.querySelector("ul").innerHTML = "";
   var sCity = JSON.parse(localStorage.getItem("cityname"));
@@ -171,7 +185,6 @@ function loadLastCity() {
   }
 }
 
-// Wyczyść historię wyszukiwania
 function clearHistory(event) {
   event.preventDefault();
   sCity = [];
@@ -179,14 +192,18 @@ function clearHistory(event) {
   location.reload();
 }
 
-// Dodaj obsługę zdarzenia keydown na polu do wprowadzania miasta
+/*
+ * Handle keydown on the city input
+ */
 searchCity.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     displayWeather(event);
   }
 });
 
-// Zaktualizuj funkcję displayWeather, aby obsługiwała również wciśnięcie Enter
+/*
+ * Updated displayWeather that also handles the Enter key
+ */
 function displayWeather(event) {
   if (event) {
     event.preventDefault();
@@ -197,7 +214,9 @@ function displayWeather(event) {
   }
 }
 
-// Obsługa zdarzeń
+/*
+ * Event handlers
+ */
 searchButton.addEventListener("click", displayWeather);
 document.addEventListener("click", invokePastSearch);
 window.addEventListener("load", loadLastCity);

@@ -28,4 +28,6 @@ export class NoteManager {
         this.updateLocalStorage();
     }
 }
-//Możliwa rozbudowa o dodatkowe funkcje notesu...
+/*
+ * Can be extended with more notepad features...
+ */

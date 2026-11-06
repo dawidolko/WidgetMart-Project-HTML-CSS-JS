@@ -1,27 +1,30 @@
-// Nasłuchuj kliknięcia na przycisk o id 'toggle-theme' i wywołaj funkcję toggleTheme
 document.getElementById("toggle-theme").addEventListener("click", toggleTheme);
 
-// Nasłuchuj kliknięcia na przycisk o id 'expand-collapse-btn' i wywołaj funkcję toggleChat
 document
   .getElementById("expand-collapse-btn")
   .addEventListener("click", toggleChat);
 
-// Nasłuchuj kliknięcia na przycisk o id 'get-quote' i wywołaj funkcję fetchRandomQuote
 document
   .getElementById("get-quote")
   .addEventListener("click", fetchRandomQuote);
 
-// Funkcja zmieniająca motyw (ciemny/jasny)
+/*
+ * Switches the theme (dark/light)
+ */
 function applyTheme(isDark) {
   document.documentElement.classList.toggle("dark", isDark);
 
-  // Okno czatu ma wlasny styl ciemny — trzymamy je w zgodzie ze strona.
+  /*
+   * The chat window has its own dark style; keep it in sync with the page.
+   */
   const chatContainer = document.querySelector(".chat-container");
   if (chatContainer) {
     chatContainer.classList.toggle("dark-mode", isDark);
   }
 
-  // Oba przyciski (navbar i czat) pokazuja ten sam stan.
+  /*
+   * Both buttons (navbar and chat) show the same state.
+   */
   const chatButton = document.getElementById("toggle-theme");
   if (chatButton) {
     chatButton.textContent = isDark ? "bright mode" : "change theme";
@@ -37,8 +40,10 @@ function applyTheme(isDark) {
   try {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   } catch (e) {
-    // Prywatne okno przegladarki potrafi zablokowac zapis — motyw zadziala,
-    // po prostu nie zostanie zapamietany.
+    /*
+     * A private browser window can block saving: the theme still works, it just
+     * will not be remembered.
+     */
   }
 }
 
@@ -47,12 +52,12 @@ function toggleTheme() {
 }
 
 /*
- * Przycisk w navbarze przechodzi przez te sama funkcje co przycisk w czacie.
+ * The navbar button goes through the same function as the chat button.
  *
- * Wczesniej obslugiwal go osobny listener w `clock.js`, ktory zmienial tylko
- * klase na <html> — okno czatu zostawalo jasne, a etykiety obu przyciskow
- * rozjezdzaly sie ze soba. Rejestrujemy sie w fazie przechwytywania i
- * zatrzymujemy zdarzenie, zeby tamten listener nie odwracal zmiany.
+ * It used to be handled by a separate listener in `clock.js` that only changed
+ * the class on <html>: the chat window stayed light and the labels of the two
+ * buttons went out of sync. We register in the capture phase and stop the event
+ * so that listener does not revert the change.
  */
 document.addEventListener(
   "click",
@@ -66,7 +71,9 @@ document.addEventListener(
   true
 );
 
-// Przywrocenie zapamietanego motywu przy wejsciu na strone.
+/*
+ * Restores the remembered theme on page entry.
+ */
 (function restoreTheme() {
   let saved = null;
   try {
@@ -80,58 +87,71 @@ document.addEventListener(
   }
 })();
 
-// Funkcja rozwijania/zwijania kontenera czatu
+/*
+ * Expands or collapses the chat container
+ */
 function toggleChat() {
-  // Pobierz elementy, które będą zmieniane w trakcie rozwijania/zwijania
   const chatContainer = document.querySelector(".chat-container");
   const chatContent = document.querySelector(".chat-content");
   const chatHeaderSpan = chatContainer.querySelector(".chat-header span");
   const toggleThemeButton = chatContainer.querySelector("#toggle-theme");
-  // Sprawdź, czy kontener jest rozwinięty (expanded)
   const isExpanded = chatContainer.classList.toggle("expanded");
-  // Ustaw widoczność zawartości czatu w zależności od stanu rozwinięcia
   chatContent.style.display = isExpanded ? "block" : "none";
-  // Zmień tekst przycisku rozwijania/zwijania
   document.getElementById("expand-collapse-btn").textContent = isExpanded
     ? "−"
     : "+";
-  // Zmień transformację kontenera w zależności od stanu rozwinięcia
   chatContainer.style.transform = isExpanded
     ? "translateY(0)"
     : "translateY(calc(100% - 50px))";
 
-  // Dla urządzeń o szerokości do 600px
+  /*
+   * Devices up to 600px wide
+   */
   if (window.innerWidth <= 600) {
     if (isExpanded) {
-      // Rozwiń kontener czatu do pełnego widoku
-      chatContainer.style.width = "350px"; // Przywróć standardową szerokość
-      chatHeaderSpan.style.display = "block"; // Pokaż tytuł
-      toggleThemeButton.style.display = "block"; // Pokaż przycisk zmiany motywu
+      /*
+       * Expand the chat container to the full view
+       */
+      /*
+       * Restore the standard width
+       */
+      chatContainer.style.width = "350px";
+      chatHeaderSpan.style.display = "block";
+      toggleThemeButton.style.display = "block";
     } else {
-      // Zwiń kontener czatu do widoku z tylko przyciskiem '+'
-      chatContainer.style.width = "70px"; // Zmień szerokość na minimalną
-      chatHeaderSpan.style.display = "none"; // Ukryj tytuł
-      toggleThemeButton.style.display = "none"; // Ukryj przycisk zmiany motywu
+      /*
+       * Collapse the chat container to show only the '+' button
+       */
+      /*
+       * Minimum width
+       */
+      chatContainer.style.width = "70px";
+      chatHeaderSpan.style.display = "none";
+      toggleThemeButton.style.display = "none";
     }
   }
 
-  // Zmień widoczność zawartości czatu
   chatContent.style.display = isExpanded ? "block" : "none";
 
-  // Zmień tekst przycisku rozwijania/zwijania
   const expandCollapseBtn = document.getElementById("expand-collapse-btn");
   expandCollapseBtn.textContent = isExpanded ? "−" : "+";
 }
 
-// Funkcja wyświetlająca przysłowie i obsługująca nawigację
+/*
+ * Shows the proverb and handles navigation
+ */
 function displayProverbAndNavigate(data) {
   const quoteDisplay = document.getElementById("quote-display");
   quoteDisplay.textContent = `"${data.content}" — ${data.author}`;
-  // uzywanie bom do nawigacji po stronie (hash)
+  /*
+   * Use the BOM to navigate the page (hash)
+   */
   window.location.hash = "quote";
 }
 
-// Lokalny fallback z cytatami
+/*
+ * Local quote fallback
+ */
 const localQuotes = [
   {
     content: "The only way to do great work is to love what you do.",
@@ -170,10 +190,14 @@ const localQuotes = [
   },
 ];
 
-// Funkcja, która zwraca Promise do pobrania cytatu z API
+/*
+ * Returns a Promise fetching a quote from the API
+ */
 function fetchQuote() {
   return new Promise((resolve, reject) => {
-    // Pierwsze API - DummyJSON (bez problemów z CORS)
+    /*
+     * First API: DummyJSON (no CORS issues)
+     */
     fetch("https://dummyjson.com/quotes/random")
       .then((response) => {
         if (!response.ok) throw new Error("Primary API failed");
@@ -188,7 +212,9 @@ function fetchQuote() {
       })
       .catch((error) => {
         console.warn("Primary API failed, using local quotes:", error);
-        // Lokalny fallback - losowy cytat z tablicy
+        /*
+         * Local fallback: random quote from the array
+         */
         const randomQuote =
           localQuotes[Math.floor(Math.random() * localQuotes.length)];
         resolve(randomQuote);
@@ -196,27 +222,36 @@ function fetchQuote() {
   });
 }
 
-// Funkcja asynchroniczna do pobierania losowego cytatu i zmiany tła
+/*
+ * Fetches a random quote and changes the background
+ */
 async function fetchRandomQuote() {
   const chatContainer = document.querySelector(".chat-container");
   const quoteDisplay = document.getElementById("quote-display");
 
-  // Pokaż loading
   quoteDisplay.textContent = "Loading quote...";
 
   try {
-    const data = await fetchQuote(); // Pobierz cytatu korzystając z Promise
+    const data = await fetchQuote();
     quoteDisplay.textContent = `"${data.content}" — ${data.author}`;
-    quoteDisplay.classList.add("quote-style"); // Stylizacja cytatu
-    chatContainer.style.backgroundColor = "#7c4200"; // Sukces: zmiana koloru tła na pomarańczowy
+    quoteDisplay.classList.add("quote-style");
+    /*
+     * Success: orange background
+     */
+    chatContainer.style.backgroundColor = "#7c4200";
   } catch (error) {
     quoteDisplay.textContent = "Could not fetch quote. Please try again later.";
     console.error("Error fetching random quote:", error);
-    chatContainer.style.backgroundColor = ""; // Niepowodzenie: przywrócenie standardowego koloru tła
+    /*
+     * Failure: restore the standard background colour
+     */
+    chatContainer.style.backgroundColor = "";
   }
 }
 
-// Nasłuchuj zdarzenia DOMContentLoaded i uruchom funkcję toggleChat przy załadowaniu strony
+/*
+ * Run toggleChat on DOMContentLoaded
+ */
 window.addEventListener("DOMContentLoaded", () => {
   toggleChat();
 });

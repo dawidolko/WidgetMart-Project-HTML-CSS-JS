@@ -1,55 +1,58 @@
-/* Root variables
-   --blue: Główny kolor niebieski używany w stylach.
-   --black-color: Czarny kolor używany dla tekstu lub tła.
-   --white-color: Biały kolor używany dla tekstu lub tła.
-   --gray-color: Szary kolor używany jako neutralny lub dla tekstu.
-   --red-color, --red2-color: Odcienie czerwonego używane dla akcentów lub przycisków.
-   --first-color do --ten-color: Paleta kolorów używana w projekcie dla różnych elementów.
-*/
+/*
+ * Root variables
+ * --blue: main blue colour.
+ * --black-color: black for text or backgrounds.
+ * --white-color: white for text or backgrounds.
+ * --gray-color: neutral grey, also for text.
+ * --red-color, --red2-color: red shades for accents or buttons.
+ * --first-color to --ten-color: project colour palette.
+ */
 
-/* Animations
-   @keyframes pulse: Definicja animacji pulsowania dla elementów.
-   @keyframes fadeOut: Animacja wygaszania elementów na stronie.
-   @keyframes animacja1: Animacja obrotu 360 stopni.
-   @keyframes animacja2: Animacja zmniejszenia skali elementu.
-   @keyframes animacja3: Animacja obrotu -360 stopni (w przeciwnym kierunku).
-   @keyframes animacjaX: Kombinacja animacji obrotu i zmiany skali.
-   @keyframes rocking: Animacja kołysania elementu.
-   @keyframes blink-animation: Animacja zmiany tła elementu.
-   @keyframes slideInOut: Animacja przesuwania elementu.
-   @keyframes typing: Symulacja animacji pisania maszynowego.
-   @keyframes blink: Animacja migania kursora.
-   @keyframes neon1: Animacja efektu neonowego tekstu.
-*/
+/*
+ * Animations
+ * @keyframes pulse: pulsing animation.
+ * @keyframes fadeOut: fades elements out.
+ * @keyframes animacja1: 360 degree rotation.
+ * @keyframes animacja2: scales the element down.
+ * @keyframes animacja3: -360 degree rotation (opposite direction).
+ * @keyframes animacjaX: combined rotation and scaling.
+ * @keyframes rocking: rocking motion.
+ * @keyframes blink-animation: changes the element background.
+ * @keyframes slideInOut: slides the element.
+ * @keyframes typing: simulates typing.
+ * @keyframes blink: cursor blink.
+ * @keyframes neon1: neon text effect.
+ */
 
-/* Global settings
-   *: Resetowanie marginesów i paddingów oraz ustawienie box-sizing na border-box.
-   body: Definicja podstawowych stylów dla całej strony.
-   img: Uniwersalne ustawienia dla obrazków, takie jak szerokość, wysokość i zachowanie proporcji.
-*/
+/*
+ * Global settings
+ * Reset of margins and paddings, and box-sizing set to border-box.
+ * body: base styles for the whole page.
+ * img: common image settings such as width, height and aspect ratio.
+ */
 
-/* Components
-   .header: Stylizacja głównego nagłówka strony.
-   .blur-background: Styl dla rozmytego tła w nagłówku.
-   .logoTrans: Animacja i styl dla logo z efektem przejścia.
-   .circle: Styl dla elementu okrągłego, często używanego dla logo lub avatara.
-   .loading-top, .loading-bottom: Style dla pasków ładowania na górze i dole strony.
-   .header__text: Stylizacja tekstu w nagłówku.
-   .wrapper: Uniwersalny wrapper dla centrowania elementów.
-   .navbar: Stylizacja paska nawigacyjnego.
-   ... (Reszta komentarzy dotycząca poszczególnych komponentów i ich stylów)
-*/
+/*
+ * Components
+ * .header: main page header.
+ * .blur-background: blurred header background.
+ * .logoTrans: logo animation and transition effect.
+ * .circle: round element, often for a logo or avatar.
+ * .loading-top, .loading-bottom: top and bottom loading bars.
+ * .header__text: header text.
+ * .wrapper: common wrapper for centring elements.
+ * .navbar: navigation bar.
+ */
 
-/* Media queries
-   Definicje zachowania stylów na różnych szerokościach ekranu.
-   Szczególnie ważne dla responsywności strony.
-   Zawiera różne punkty przełamania dla różnych typów urządzeń.
-*/
+/*
+ * Media queries
+ * Style behaviour at different screen widths, with breakpoints for different device types.
+ */
 
-/* Root variables
-   Zmiennne globalne do przechowywania kolorów i innych często używanych wartości.
-   Możliwe do użycia w całym arkuszu stylów dla łatwego dostępu i zmiany.
-*/
+/*
+ * Root variables
+ * Global variables holding colours and other frequently used values, for easy
+ * access and changes across the stylesheet.
+ */
 :root {
   --primary-color: #000;
   --secondary-color: #fff;
@@ -1433,7 +1436,7 @@ div.slider-controls {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto; /* Centrowanie sekcji na stronie */
+  margin: auto;
   position: relative;
 }
 #logoCanvas {

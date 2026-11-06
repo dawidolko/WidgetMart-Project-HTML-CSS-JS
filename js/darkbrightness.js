@@ -1,11 +1,13 @@
-// Pobranie referencji do elementów HTML
 let container = document.getElementById("container"),
     content = document.getElementById("content"),
     message = document.getElementById("message"),
     button = document.getElementById("button"),
     button2 = document.getElementById("button2");
 
-// Reszta kodu obsługuje zegar i zmianę motywu jasnego/ciemnego, ale nie jest związana z funkcją obsługi spotkania.
+/*
+ * The rest of the code handles the clock and the light/dark theme switch; it is
+ * not related to the appointment feature.
+ */
 const toggle = document.querySelector(".toggle");
 
 
